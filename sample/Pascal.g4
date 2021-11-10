@@ -1,31 +1,102 @@
 grammar Pascal;
 
-prog : compound_statement DOT;
+program:
+    (infoPart)? (variableDeclarationPart)? block DOT;
 
-compound_statement : BEGIN statement_list END
-			;
+infoPart:
+    'program' .+? SEMI;
 
-statement_list : statement
-                   | statement SEMI statement_list
-			;
+variableDeclarationPart:
+    'var' variableDeclaration (SEMI variableDeclaration)* SEMI;
 
-statement : compound_statement
-              | assignment_statement
-              | empty
-			;
+variableDeclaration:
+    identifierList COLON varType;
 
-assignment_statement : variable ASSIGN expr ;
+identifierList:
+    ID (COMMA ID)*;
 
-empty : ;
+varType:
+    ('integer' | 'int64');
 
-expr: term ((PLUS | MINUS) term)* ;
+block:
+    'begin' statements SEMI? 'end';
 
-term: factor ((MUL | DIV) factor)* ;
+statements:
+    statement (SEMI statement)*;
 
-factor : PLUS factor
-           | MINUS factor
-           | INTEGER
-           | LPAREN expr RPAREN
-           | variable
-		;
-variable: ID ;
+statement:
+    writelnReadln
+    | readln
+    | writeln
+    | block
+    | assignmentStatement
+    | ifStatement
+    | whileStatement
+    ;
+
+writelnReadln:
+    'writeln' LPAREN CONST_STR RPAREN SEMI
+    'readln' LPAREN ID RPAREN;
+
+readln:
+    'readln' LPAREN identifierList RPAREN;
+
+writeln:
+    'writeln' LPAREN expressions RPAREN;
+
+assignmentStatement:
+    ID ASSIGN expression;
+
+expressions:
+    expression (COMMA expression)*;
+
+expression:
+    (LPAREN expression RPAREN | CONST_INT | CONST_STR | ID) (operators expression)*;
+
+operators:
+    EQUAL | NOT_EQUAL | LT | LE | GE | GT | OR | AND | DIV | MOD | PLUS | MINUS | STAR | SLASH;
+
+ifStatement:
+    'if' expression 'then' (block|blockBody) elseStatement?;
+
+elseStatement:
+    'else' (block|blockBody);
+
+whileStatement:
+    'while' expression 'do' (block|blockBody);
+
+blockBody:
+    statement;
+
+
+SEMI: ';';
+COLON: ':';
+COMMA: ',';
+DOT: '.';
+LPAREN: '(';
+RPAREN: ')';
+ASSIGN: ':=';
+
+EQUAL: '=';
+NOT_EQUAL: '<>';
+LT: '<';
+LE: '<=';
+GE: '>=';
+GT: '>';
+OR: 'or';
+AND: 'and';
+
+PLUS: '+';
+MINUS: '-';
+STAR: '*';
+SLASH: '/';
+
+DIV: '//';
+MOD: '%';
+
+ID: [a-zA-Z][a-zA-Z0-9_]*;
+CONST_INT: [0-9]+;
+CONST_STR: '\'' ('\'\'' | ~ ('\''))* '\'';
+WS: [ \t\r\n]+ -> skip;
+COMMENT1: '(*' .*? '*)' -> skip;
+COMMENT2: '{' .*? '}' -> skip;
