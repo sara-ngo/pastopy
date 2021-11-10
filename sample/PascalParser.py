@@ -186,7 +186,6 @@ class PascalParser ( Parser ):
 
 
 
-
     class ProgramContext(ParserRuleContext):
         __slots__ = 'parser'
 
@@ -225,8 +224,6 @@ class PascalParser ( Parser ):
                 return visitor.visitProgram(self)
             else:
                 return visitor.visitChildren(self)
-
-
 
 
     def program(self):
