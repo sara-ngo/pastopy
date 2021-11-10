@@ -1,5 +1,6 @@
 import re
 import sys
+import os
 
 from antlr4.InputStream import InputStream
 from antlr4.CommonTokenStream import CommonTokenStream
@@ -87,18 +88,21 @@ class Listener(PascalListener):
         else:
             raise NotImplementedError(var_type)
 
-    def _print(self, line):
+    def _print(self, line): # print line by line
         with open("result.py", "a") as f:
             code = ' ' * self.spaces + line + "\n"
             f.write(code)
-        # print(' ' * self.spaces, line, sep='')
+        print(' ' * self.spaces, line, sep='')
 
 
 def main(filename):
     with open(filename) as f:
         text = f.read()
     text = re.sub(r'\b({})\b'.format(r'|'.join(KEYWORDS)), lambda m: m.group().lower(), text, flags=re.IGNORECASE)
-    print(text)
+    print("Pascal Test case:")
+    print(text + "\n")
+
+    print("Interpreter to Python:")
     text = text.replace('div', '//').replace('mod', '%')
 
     lexer = PascalLexer(InputStream(text))
@@ -106,16 +110,20 @@ def main(filename):
     parser = PascalParser(stream)
     tree = parser.program()
     listener = Listener()
+
     walker = ParseTreeWalker()
     walker.walk(listener, tree)
 
+    print('\nExecute code in Python:')
+    os.system('python result.py') # execute result.py
+    open('result.py', 'w').close() # clean and close result.py
 
 if __name__ == '__main__':
     if len(sys.argv) == 2:
         main(sys.argv[1])
     else:
-        main('test/test1.pas')
-        # main('test/test2.pas')
+        # main('test/test1.pas')
+        main('test/test2.pas')
         # main('test/test3.pas')
         # main('test/test4.pas')
         # main('test/test5.pas')

@@ -4,5 +4,5 @@ var
     a : integer;
 begin
     a := 10;
-    write(a);
+    writeln(a);
 end.
