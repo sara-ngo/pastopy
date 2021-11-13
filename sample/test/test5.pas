@@ -6,5 +6,5 @@ var
 
 begin
     a := 2021;
-    write(a);
+    writeln(a);
 end.

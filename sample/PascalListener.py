@@ -7,9 +7,6 @@ else:
 
 # This class defines a complete listener for a parse tree produced by PascalParser.
 class PascalListener(ParseTreeListener):
-    def __init__(self):
-        self.var_ls = {}
-        self.spaces = -4
 
     # Enter a parse tree produced by PascalParser#program.
     def enterProgram(self, ctx:PascalParser.ProgramContext):
@@ -22,8 +19,7 @@ class PascalListener(ParseTreeListener):
 
     # Enter a parse tree produced by PascalParser#infoPart.
     def enterInfoPart(self, ctx:PascalParser.InfoPartContext):
-        text = ctx.getText().split("program")[-1]
-        self._print(f"#program {text}")
+        pass
 
     # Exit a parse tree produced by PascalParser#infoPart.
     def exitInfoPart(self, ctx:PascalParser.InfoPartContext):
@@ -32,9 +28,7 @@ class PascalListener(ParseTreeListener):
 
     # Enter a parse tree produced by PascalParser#variableDeclarationPart.
     def enterVariableDeclarationPart(self, ctx:PascalParser.VariableDeclarationPartContext):
-        var_type = ctx.varType().getText()
-        for i in ctx.identifierList().getText().split(','):
-            self.var_ls[i] = var_type
+        pass
 
     # Exit a parse tree produced by PascalParser#variableDeclarationPart.
     def exitVariableDeclarationPart(self, ctx:PascalParser.VariableDeclarationPartContext):
@@ -70,11 +64,11 @@ class PascalListener(ParseTreeListener):
 
     # Enter a parse tree produced by PascalParser#block.
     def enterBlock(self, ctx:PascalParser.BlockContext):
-        self.spaces += 4
+        pass
 
     # Exit a parse tree produced by PascalParser#block.
     def exitBlock(self, ctx:PascalParser.BlockContext):
-        self.spaces -= 4
+        pass
 
 
     # Enter a parse tree produced by PascalParser#statements.
@@ -97,9 +91,7 @@ class PascalListener(ParseTreeListener):
 
     # Enter a parse tree produced by PascalParser#writelnReadln.
     def enterWritelnReadln(self, ctx:PascalParser.WritelnReadlnContext):
-        var = ctx.ID().getText()
-        const = ctx.CONST_STR().getText()
-        self._print_input(var, const)
+        pass
 
     # Exit a parse tree produced by PascalParser#writelnReadln.
     def exitWritelnReadln(self, ctx:PascalParser.WritelnReadlnContext):
@@ -108,8 +100,7 @@ class PascalListener(ParseTreeListener):
 
     # Enter a parse tree produced by PascalParser#readln.
     def enterReadln(self, ctx:PascalParser.ReadlnContext):
-        for i in ctx.identifierList().getText().split(','):
-            self._print_input(i)
+        pass
 
     # Exit a parse tree produced by PascalParser#readln.
     def exitReadln(self, ctx:PascalParser.ReadlnContext):
@@ -122,7 +113,7 @@ class PascalListener(ParseTreeListener):
 
     # Exit a parse tree produced by PascalParser#writeln.
     def exitWriteln(self, ctx:PascalParser.WritelnContext):
-        self._print('print({})'.format(ctx.expressions().getText()))
+        pass
 
 
     # Enter a parse tree produced by PascalParser#assignmentStatement.
@@ -131,9 +122,7 @@ class PascalListener(ParseTreeListener):
 
     # Exit a parse tree produced by PascalParser#assignmentStatement.
     def exitAssignmentStatement(self, ctx:PascalParser.AssignmentStatementContext):
-        var = ctx.ID().getText()
-        expr = ctx.expression().getText()
-        self._print(f'{var} = {expr}')
+        pass
 
 
     # Enter a parse tree produced by PascalParser#expressions.
@@ -165,38 +154,12 @@ class PascalListener(ParseTreeListener):
 
     # Enter a parse tree produced by PascalParser#blockBody.
     def enterBlockBody(self, ctx:PascalParser.BlockBodyContext):
-        self.spaces += 4
+        pass
 
     # Exit a parse tree produced by PascalParser#blockBody.
     def exitBlockBody(self, ctx:PascalParser.BlockBodyContext):
-        self.spaces -= 4
+        pass
 
-    def _print_input(self, var, const=None):
-        const = const or ''
-        var_type = self._get_var_type(var)
-        if var_type:
-            self._print(f'{var} = {var_type}(input({const}))')
-        else:
-            raise NotImplementedError
 
-    def _get_var_type(self, var):
-        try:
-            var_type = self.var_ls[var]
-        except KeyError:
-            raise ValueError(f'variable {var} not defined')
-        if var_type in ('integer', 'int64'):
-            return 'int'
-        elif var_type in ('real'):
-            return 'float'
-        elif var_type in ('string'):
-            return 'string'
-        else:
-            raise NotImplementedError(var_type)
-
-    def _print(self, line):  # print line by line
-        with open("result.py", "a") as f:
-            code = ' ' * self.spaces + line + "\n"
-            f.write(code)
-        print(' ' * self.spaces, line, sep='')
 
 del PascalParser
