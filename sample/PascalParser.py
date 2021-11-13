@@ -185,12 +185,6 @@ class PascalParser ( Parser ):
             if hasattr( listener, "exitProgram" ):
                 listener.exitProgram(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProgram" ):
-                return visitor.visitProgram(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -250,12 +244,6 @@ class PascalParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInfoPart" ):
                 listener.exitInfoPart(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitInfoPart" ):
-                return visitor.visitInfoPart(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -324,12 +312,6 @@ class PascalParser ( Parser ):
             if hasattr( listener, "exitVariableDeclarationPart" ):
                 listener.exitVariableDeclarationPart(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVariableDeclarationPart" ):
-                return visitor.visitVariableDeclarationPart(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -396,12 +378,6 @@ class PascalParser ( Parser ):
             if hasattr( listener, "exitVariableDeclaration" ):
                 listener.exitVariableDeclaration(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVariableDeclaration" ):
-                return visitor.visitVariableDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -456,12 +432,6 @@ class PascalParser ( Parser ):
             if hasattr( listener, "exitIdentifierList" ):
                 listener.exitIdentifierList(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIdentifierList" ):
-                return visitor.visitIdentifierList(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -514,12 +484,6 @@ class PascalParser ( Parser ):
             if hasattr( listener, "exitVarType" ):
                 listener.exitVarType(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVarType" ):
-                return visitor.visitVarType(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -570,12 +534,6 @@ class PascalParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBlock" ):
                 listener.exitBlock(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitBlock" ):
-                return visitor.visitBlock(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -640,12 +598,6 @@ class PascalParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStatements" ):
                 listener.exitStatements(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStatements" ):
-                return visitor.visitStatements(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -717,12 +669,6 @@ class PascalParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStatement" ):
                 listener.exitStatement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStatement" ):
-                return visitor.visitStatement(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -814,12 +760,6 @@ class PascalParser ( Parser ):
             if hasattr( listener, "exitWritelnReadln" ):
                 listener.exitWritelnReadln(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWritelnReadln" ):
-                return visitor.visitWritelnReadln(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -884,12 +824,6 @@ class PascalParser ( Parser ):
             if hasattr( listener, "exitReadln" ):
                 listener.exitReadln(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReadln" ):
-                return visitor.visitReadln(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -943,12 +877,6 @@ class PascalParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWriteln" ):
                 listener.exitWriteln(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWriteln" ):
-                return visitor.visitWriteln(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -1004,12 +932,6 @@ class PascalParser ( Parser ):
             if hasattr( listener, "exitAssignmentStatement" ):
                 listener.exitAssignmentStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAssignmentStatement" ):
-                return visitor.visitAssignmentStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -1064,12 +986,6 @@ class PascalParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExpressions" ):
                 listener.exitExpressions(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpressions" ):
-                return visitor.visitExpressions(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -1150,12 +1066,6 @@ class PascalParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExpression" ):
                 listener.exitExpression(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpression" ):
-                return visitor.visitExpression(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -1250,12 +1160,6 @@ class PascalParser ( Parser ):
             if hasattr( listener, "exitOperators" ):
                 listener.exitOperators(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOperators" ):
-                return visitor.visitOperators(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -1303,12 +1207,6 @@ class PascalParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBlockBody" ):
                 listener.exitBlockBody(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitBlockBody" ):
-                return visitor.visitBlockBody(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
