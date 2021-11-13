@@ -11,5 +11,5 @@ var
 begin
     b := 25;
     a := ((50*2) / b);
-    write('a = ', a :5 :1)
+    writeln('a = ', a)
 end.

@@ -1,5 +1,7 @@
 grammar Pascal;
 
+// parser
+
 program:
     (infoPart)? (variableDeclarationPart)? block DOT;
 
@@ -16,7 +18,7 @@ identifierList:
     ID (COMMA ID)*;
 
 varType:
-    ('integer' | 'int64');
+    ('integer' | 'int64' | 'real' | 'string');
 
 block:
     'begin' statements SEMI? 'end';
@@ -30,8 +32,6 @@ statement:
     | writeln
     | block
     | assignmentStatement
-    | ifStatement
-    | whileStatement
     ;
 
 writelnReadln:
@@ -54,20 +54,12 @@ expression:
     (LPAREN expression RPAREN | CONST_INT | CONST_STR | ID) (operators expression)*;
 
 operators:
-    EQUAL | NOT_EQUAL | LT | LE | GE | GT | OR | AND | DIV | MOD | PLUS | MINUS | STAR | SLASH;
-
-ifStatement:
-    'if' expression 'then' (block|blockBody) elseStatement?;
-
-elseStatement:
-    'else' (block|blockBody);
-
-whileStatement:
-    'while' expression 'do' (block|blockBody);
+    DIV | MOD | PLUS | MINUS | MUL | SLASH;
 
 blockBody:
     statement;
 
+// lexer
 
 SEMI: ';';
 COLON: ':';
@@ -77,20 +69,10 @@ LPAREN: '(';
 RPAREN: ')';
 ASSIGN: ':=';
 
-EQUAL: '=';
-NOT_EQUAL: '<>';
-LT: '<';
-LE: '<=';
-GE: '>=';
-GT: '>';
-OR: 'or';
-AND: 'and';
-
 PLUS: '+';
 MINUS: '-';
-STAR: '*';
+MUL: '*';
 SLASH: '/';
-
 DIV: '//';
 MOD: '%';
 
