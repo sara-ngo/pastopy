@@ -152,33 +152,6 @@ class PascalListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PascalParser#ifStatement.
-    def enterIfStatement(self, ctx:PascalParser.IfStatementContext):
-        pass
-
-    # Exit a parse tree produced by PascalParser#ifStatement.
-    def exitIfStatement(self, ctx:PascalParser.IfStatementContext):
-        pass
-
-
-    # Enter a parse tree produced by PascalParser#elseStatement.
-    def enterElseStatement(self, ctx:PascalParser.ElseStatementContext):
-        pass
-
-    # Exit a parse tree produced by PascalParser#elseStatement.
-    def exitElseStatement(self, ctx:PascalParser.ElseStatementContext):
-        pass
-
-
-    # Enter a parse tree produced by PascalParser#whileStatement.
-    def enterWhileStatement(self, ctx:PascalParser.WhileStatementContext):
-        pass
-
-    # Exit a parse tree produced by PascalParser#whileStatement.
-    def exitWhileStatement(self, ctx:PascalParser.WhileStatementContext):
-        pass
-
-
     # Enter a parse tree produced by PascalParser#blockBody.
     def enterBlockBody(self, ctx:PascalParser.BlockBodyContext):
         pass

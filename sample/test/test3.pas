@@ -4,6 +4,6 @@ var
     a : string;
 begin
     a := 'Hello World';
-    write(a);
+    writeln(a);
 end.
 

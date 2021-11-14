@@ -89,21 +89,6 @@ class PascalVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PascalParser#ifStatement.
-    def visitIfStatement(self, ctx:PascalParser.IfStatementContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by PascalParser#elseStatement.
-    def visitElseStatement(self, ctx:PascalParser.ElseStatementContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by PascalParser#whileStatement.
-    def visitWhileStatement(self, ctx:PascalParser.WhileStatementContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by PascalParser#blockBody.
     def visitBlockBody(self, ctx:PascalParser.BlockBodyContext):
         return self.visitChildren(ctx)
