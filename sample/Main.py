@@ -113,7 +113,7 @@ def main(filename):
     os.system('python result.py')  # execute result.py
     open('result.py', 'w').close()  # clean and close result.py
 
-    print(listener.var_ls) # display parse tree
+    # print(listener.var_ls)
 
 if __name__ == '__main__':
     if len(sys.argv) == 2:
@@ -122,8 +122,8 @@ if __name__ == '__main__':
         # main('test/test1.pas')
         # main('test/test2.pas')
         # main('test/test3.pas')
-        main('test/test4.pas')
-        # main('test/test5.pas')
+        # main('test/test4.pas')
+        main('test/test5.pas')
         # main('test/test6.pas')
         # main('test/test7.pas')
         # main('test/test8.pas')
