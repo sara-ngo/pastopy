@@ -17,7 +17,7 @@ varName:
     ID (COMMA ID)*;
 
 varType:
-    ('integer' | 'int64' | 'real' | 'string');
+    ('integer' | 'real' | 'string');
 
 block:
     'begin' statements SEMI? 'end';
