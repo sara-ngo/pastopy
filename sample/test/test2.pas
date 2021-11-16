@@ -1,4 +1,5 @@
 (* LET <var1> = number; *)
+program testcase2;
 
 var
     a : integer;

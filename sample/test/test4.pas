@@ -4,6 +4,8 @@ if var2 is not an integer or is null, throw an error - unfinished
 throws error if div by zero - unfinished
 all div will be int div - unfinished*)
 
+program testcase4;
+
 var
     a, b: real;
 

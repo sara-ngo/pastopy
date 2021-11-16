@@ -17,39 +17,39 @@ class PascalListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PascalParser#infoPart.
-    def enterInfoPart(self, ctx:PascalParser.InfoPartContext):
+    # Enter a parse tree produced by PascalParser#programName.
+    def enterProgramName(self, ctx:PascalParser.ProgramNameContext):
         pass
 
-    # Exit a parse tree produced by PascalParser#infoPart.
-    def exitInfoPart(self, ctx:PascalParser.InfoPartContext):
-        pass
-
-
-    # Enter a parse tree produced by PascalParser#variableDeclarationPart.
-    def enterVariableDeclarationPart(self, ctx:PascalParser.VariableDeclarationPartContext):
-        pass
-
-    # Exit a parse tree produced by PascalParser#variableDeclarationPart.
-    def exitVariableDeclarationPart(self, ctx:PascalParser.VariableDeclarationPartContext):
+    # Exit a parse tree produced by PascalParser#programName.
+    def exitProgramName(self, ctx:PascalParser.ProgramNameContext):
         pass
 
 
-    # Enter a parse tree produced by PascalParser#variableDeclaration.
-    def enterVariableDeclaration(self, ctx:PascalParser.VariableDeclarationContext):
+    # Enter a parse tree produced by PascalParser#varDeclaration.
+    def enterVarDeclaration(self, ctx:PascalParser.VarDeclarationContext):
         pass
 
-    # Exit a parse tree produced by PascalParser#variableDeclaration.
-    def exitVariableDeclaration(self, ctx:PascalParser.VariableDeclarationContext):
+    # Exit a parse tree produced by PascalParser#varDeclaration.
+    def exitVarDeclaration(self, ctx:PascalParser.VarDeclarationContext):
         pass
 
 
-    # Enter a parse tree produced by PascalParser#identifierList.
-    def enterIdentifierList(self, ctx:PascalParser.IdentifierListContext):
+    # Enter a parse tree produced by PascalParser#varName.
+    def enterVarName(self, ctx:PascalParser.VarNameContext):
         pass
 
-    # Exit a parse tree produced by PascalParser#identifierList.
-    def exitIdentifierList(self, ctx:PascalParser.IdentifierListContext):
+    # Exit a parse tree produced by PascalParser#varName.
+    def exitVarName(self, ctx:PascalParser.VarNameContext):
+        pass
+
+
+    # Enter a parse tree produced by PascalParser#varID.
+    def enterVarID(self, ctx:PascalParser.VarIDContext):
+        pass
+
+    # Exit a parse tree produced by PascalParser#varID.
+    def exitVarID(self, ctx:PascalParser.VarIDContext):
         pass
 
 

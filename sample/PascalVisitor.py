@@ -14,23 +14,23 @@ class PascalVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PascalParser#infoPart.
-    def visitInfoPart(self, ctx:PascalParser.InfoPartContext):
+    # Visit a parse tree produced by PascalParser#programName.
+    def visitProgramName(self, ctx:PascalParser.ProgramNameContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PascalParser#variableDeclarationPart.
-    def visitVariableDeclarationPart(self, ctx:PascalParser.VariableDeclarationPartContext):
+    # Visit a parse tree produced by PascalParser#varDeclaration.
+    def visitVarDeclaration(self, ctx:PascalParser.VarDeclarationContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PascalParser#variableDeclaration.
-    def visitVariableDeclaration(self, ctx:PascalParser.VariableDeclarationContext):
+    # Visit a parse tree produced by PascalParser#varName.
+    def visitVarName(self, ctx:PascalParser.VarNameContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PascalParser#identifierList.
-    def visitIdentifierList(self, ctx:PascalParser.IdentifierListContext):
+    # Visit a parse tree produced by PascalParser#varID.
+    def visitVarID(self, ctx:PascalParser.VarIDContext):
         return self.visitChildren(ctx)
 
 

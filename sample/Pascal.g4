@@ -1,19 +1,20 @@
 grammar Pascal;
 
 // parser
+
 program:
-    (programName)? (globalVarDeclaration)? block DOT;
+    (programName)? (varDeclaration)? block DOT;
 
 programName:
     'program' .+? SEMI;
 
-globalVarDeclaration:
-    'var' variableDeclaration (SEMI variableDeclaration)* SEMI;
-
-variableDeclaration:
-    varName COLON varType;
+varDeclaration:
+    'var' varName (SEMI varName)* SEMI;
 
 varName:
+    varID COLON varType;
+
+varID:
     ID (COMMA ID)*;
 
 varType:
@@ -29,8 +30,8 @@ statement:
     writelnReadln
     | readln
     | writeln
-    | assignmentStatement
     | block
+    | assignmentStatement
     ;
 
 writelnReadln:
@@ -38,7 +39,7 @@ writelnReadln:
     'readln' LPAREN ID RPAREN;
 
 readln:
-    'readln' LPAREN varName RPAREN;
+    'readln' LPAREN varID RPAREN;
 
 writeln:
     'writeln' LPAREN expressions RPAREN;
@@ -59,6 +60,7 @@ blockBody:
     statement;
 
 // lexer
+
 SEMI: ';';
 COLON: ':';
 COMMA: ',';
@@ -78,4 +80,5 @@ ID: [a-zA-Z][a-zA-Z0-9_]*;
 CONST_INT: [0-9]+;
 CONST_STR: '\'' ('\'\'' | ~ ('\''))* '\'';
 WS: [ \t\r\n]+ -> skip;
-COMMENT: '(*' .*? '*)' -> skip;
+COMMENT1: '(*' .*? '*)' -> skip;
+COMMENT2: '{' .*? '}' -> skip;

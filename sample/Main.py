@@ -22,11 +22,11 @@ class Listener(PascalListener):
         self.var_ls = {}
         self.spaces = -4
 
-    def exitInfoPart(self, ctx: PascalParser.InfoPartContext):
+    def exitInfoPart(self, ctx: PascalParser.ProgramNameContext):
         text = ctx.getText().split("program")[-1]
         self._print(f"#program {text}")
 
-    def exitVariableDeclaration(self, ctx: PascalParser.VariableDeclarationContext):
+    def exitVariableDeclaration(self, ctx: PascalParser.VarDeclarationContext):
         var_type = ctx.varType().getText()
         for i in ctx.identifierList().getText().split(','):
             self.var_ls[i] = var_type
@@ -113,16 +113,16 @@ def main(filename):
     os.system('python result.py')  # execute result.py
     open('result.py', 'w').close()  # clean and close result.py
 
-    print(listener.var_ls) # display parse tree
+    # print(listener.var_ls) # display parse tree
 
 if __name__ == '__main__':
     if len(sys.argv) == 2:
         main(sys.argv[1])
     else:
-        # main('test/test1.pas')
+        main('test/test1.pas')
         # main('test/test2.pas')
         # main('test/test3.pas')
-        main('test/test4.pas')
+        # main('test/test4.pas')
         # main('test/test5.pas')
         # main('test/test6.pas')
         # main('test/test7.pas')

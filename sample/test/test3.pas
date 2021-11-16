@@ -1,4 +1,5 @@
 (* LET <var1> = 'string'; *)
+program testcase3;
 
 var
     a : string;

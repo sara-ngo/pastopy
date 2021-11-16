@@ -11,7 +11,7 @@ else:
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\37")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\36")
         buf.write("\u009a\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\3\2\5\2")
@@ -26,37 +26,37 @@ def serializedATN():
         buf.write("\13\17\3\20\3\20\3\20\3\20\3\20\3\20\3\20\5\20\u008c\n")
         buf.write("\20\3\20\3\20\3\20\7\20\u0091\n\20\f\20\16\20\u0094\13")
         buf.write("\20\3\21\3\21\3\22\3\22\3\22\3\61\2\23\2\4\6\b\n\f\16")
-        buf.write("\20\22\24\26\30\32\34\36 \"\2\4\3\2\5\b\3\2\24\31\2\u0098")
+        buf.write("\20\22\24\26\30\32\34\36 \"\2\4\3\2\5\7\3\2\23\30\2\u0098")
         buf.write("\2%\3\2\2\2\4-\3\2\2\2\6\65\3\2\2\2\b@\3\2\2\2\nD\3\2")
         buf.write("\2\2\fL\3\2\2\2\16N\3\2\2\2\20U\3\2\2\2\22b\3\2\2\2\24")
         buf.write("d\3\2\2\2\26n\3\2\2\2\30s\3\2\2\2\32x\3\2\2\2\34|\3\2")
         buf.write("\2\2\36\u008b\3\2\2\2 \u0095\3\2\2\2\"\u0097\3\2\2\2$")
         buf.write("&\5\4\3\2%$\3\2\2\2%&\3\2\2\2&(\3\2\2\2\')\5\6\4\2(\'")
-        buf.write("\3\2\2\2()\3\2\2\2)*\3\2\2\2*+\5\16\b\2+,\7\20\2\2,\3")
+        buf.write("\3\2\2\2()\3\2\2\2)*\3\2\2\2*+\5\16\b\2+,\7\17\2\2,\3")
         buf.write("\3\2\2\2-/\7\3\2\2.\60\13\2\2\2/.\3\2\2\2\60\61\3\2\2")
-        buf.write("\2\61\62\3\2\2\2\61/\3\2\2\2\62\63\3\2\2\2\63\64\7\r\2")
-        buf.write("\2\64\5\3\2\2\2\65\66\7\4\2\2\66;\5\b\5\2\678\7\r\2\2")
+        buf.write("\2\61\62\3\2\2\2\61/\3\2\2\2\62\63\3\2\2\2\63\64\7\f\2")
+        buf.write("\2\64\5\3\2\2\2\65\66\7\4\2\2\66;\5\b\5\2\678\7\f\2\2")
         buf.write("8:\5\b\5\29\67\3\2\2\2:=\3\2\2\2;9\3\2\2\2;<\3\2\2\2<")
-        buf.write(">\3\2\2\2=;\3\2\2\2>?\7\r\2\2?\7\3\2\2\2@A\5\n\6\2AB\7")
-        buf.write("\16\2\2BC\5\f\7\2C\t\3\2\2\2DI\7\32\2\2EF\7\17\2\2FH\7")
-        buf.write("\32\2\2GE\3\2\2\2HK\3\2\2\2IG\3\2\2\2IJ\3\2\2\2J\13\3")
-        buf.write("\2\2\2KI\3\2\2\2LM\t\2\2\2M\r\3\2\2\2NO\7\t\2\2OQ\5\20")
-        buf.write("\t\2PR\7\r\2\2QP\3\2\2\2QR\3\2\2\2RS\3\2\2\2ST\7\n\2\2")
-        buf.write("T\17\3\2\2\2UZ\5\22\n\2VW\7\r\2\2WY\5\22\n\2XV\3\2\2\2")
+        buf.write(">\3\2\2\2=;\3\2\2\2>?\7\f\2\2?\7\3\2\2\2@A\5\n\6\2AB\7")
+        buf.write("\r\2\2BC\5\f\7\2C\t\3\2\2\2DI\7\31\2\2EF\7\16\2\2FH\7")
+        buf.write("\31\2\2GE\3\2\2\2HK\3\2\2\2IG\3\2\2\2IJ\3\2\2\2J\13\3")
+        buf.write("\2\2\2KI\3\2\2\2LM\t\2\2\2M\r\3\2\2\2NO\7\b\2\2OQ\5\20")
+        buf.write("\t\2PR\7\f\2\2QP\3\2\2\2QR\3\2\2\2RS\3\2\2\2ST\7\t\2\2")
+        buf.write("T\17\3\2\2\2UZ\5\22\n\2VW\7\f\2\2WY\5\22\n\2XV\3\2\2\2")
         buf.write("Y\\\3\2\2\2ZX\3\2\2\2Z[\3\2\2\2[\21\3\2\2\2\\Z\3\2\2\2")
         buf.write("]c\5\24\13\2^c\5\26\f\2_c\5\30\r\2`c\5\16\b\2ac\5\32\16")
         buf.write("\2b]\3\2\2\2b^\3\2\2\2b_\3\2\2\2b`\3\2\2\2ba\3\2\2\2c")
-        buf.write("\23\3\2\2\2de\7\13\2\2ef\7\21\2\2fg\7\34\2\2gh\7\22\2")
-        buf.write("\2hi\7\r\2\2ij\7\f\2\2jk\7\21\2\2kl\7\32\2\2lm\7\22\2")
-        buf.write("\2m\25\3\2\2\2no\7\f\2\2op\7\21\2\2pq\5\n\6\2qr\7\22\2")
-        buf.write("\2r\27\3\2\2\2st\7\13\2\2tu\7\21\2\2uv\5\34\17\2vw\7\22")
-        buf.write("\2\2w\31\3\2\2\2xy\7\32\2\2yz\7\23\2\2z{\5\36\20\2{\33")
-        buf.write("\3\2\2\2|\u0081\5\36\20\2}~\7\17\2\2~\u0080\5\36\20\2")
+        buf.write("\23\3\2\2\2de\7\n\2\2ef\7\20\2\2fg\7\33\2\2gh\7\21\2\2")
+        buf.write("hi\7\f\2\2ij\7\13\2\2jk\7\20\2\2kl\7\31\2\2lm\7\21\2\2")
+        buf.write("m\25\3\2\2\2no\7\13\2\2op\7\20\2\2pq\5\n\6\2qr\7\21\2")
+        buf.write("\2r\27\3\2\2\2st\7\n\2\2tu\7\20\2\2uv\5\34\17\2vw\7\21")
+        buf.write("\2\2w\31\3\2\2\2xy\7\31\2\2yz\7\22\2\2z{\5\36\20\2{\33")
+        buf.write("\3\2\2\2|\u0081\5\36\20\2}~\7\16\2\2~\u0080\5\36\20\2")
         buf.write("\177}\3\2\2\2\u0080\u0083\3\2\2\2\u0081\177\3\2\2\2\u0081")
         buf.write("\u0082\3\2\2\2\u0082\35\3\2\2\2\u0083\u0081\3\2\2\2\u0084")
-        buf.write("\u0085\7\21\2\2\u0085\u0086\5\36\20\2\u0086\u0087\7\22")
-        buf.write("\2\2\u0087\u008c\3\2\2\2\u0088\u008c\7\33\2\2\u0089\u008c")
-        buf.write("\7\34\2\2\u008a\u008c\7\32\2\2\u008b\u0084\3\2\2\2\u008b")
+        buf.write("\u0085\7\20\2\2\u0085\u0086\5\36\20\2\u0086\u0087\7\21")
+        buf.write("\2\2\u0087\u008c\3\2\2\2\u0088\u008c\7\32\2\2\u0089\u008c")
+        buf.write("\7\33\2\2\u008a\u008c\7\31\2\2\u008b\u0084\3\2\2\2\u008b")
         buf.write("\u0088\3\2\2\2\u008b\u0089\3\2\2\2\u008b\u008a\3\2\2\2")
         buf.write("\u008c\u0092\3\2\2\2\u008d\u008e\5 \21\2\u008e\u008f\5")
         buf.write("\36\20\2\u008f\u0091\3\2\2\2\u0090\u008d\3\2\2\2\u0091")
@@ -77,23 +77,23 @@ class PascalParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'program'", "'var'", "'integer'", "'int64'", 
-                     "'real'", "'string'", "'begin'", "'end'", "'writeln'", 
-                     "'readln'", "';'", "':'", "','", "'.'", "'('", "')'", 
-                     "':='", "'+'", "'-'", "'*'", "'/'", "'//'", "'%'" ]
+    literalNames = [ "<INVALID>", "'program'", "'var'", "'integer'", "'real'", 
+                     "'string'", "'begin'", "'end'", "'writeln'", "'readln'", 
+                     "';'", "':'", "','", "'.'", "'('", "')'", "':='", "'+'", 
+                     "'-'", "'*'", "'/'", "'//'", "'%'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "SEMI", "COLON", 
-                      "COMMA", "DOT", "LPAREN", "RPAREN", "ASSIGN", "PLUS", 
-                      "MINUS", "MUL", "SLASH", "DIV", "MOD", "ID", "CONST_INT", 
-                      "CONST_STR", "WS", "COMMENT1", "COMMENT2" ]
+                      "<INVALID>", "<INVALID>", "SEMI", "COLON", "COMMA", 
+                      "DOT", "LPAREN", "RPAREN", "ASSIGN", "PLUS", "MINUS", 
+                      "MUL", "SLASH", "DIV", "MOD", "ID", "CONST_INT", "CONST_STR", 
+                      "WS", "COMMENT1", "COMMENT2" ]
 
     RULE_program = 0
-    RULE_infoPart = 1
-    RULE_variableDeclarationPart = 2
-    RULE_variableDeclaration = 3
-    RULE_identifierList = 4
+    RULE_programName = 1
+    RULE_varDeclaration = 2
+    RULE_varName = 3
+    RULE_varID = 4
     RULE_varType = 5
     RULE_block = 6
     RULE_statements = 7
@@ -107,8 +107,8 @@ class PascalParser ( Parser ):
     RULE_operators = 15
     RULE_blockBody = 16
 
-    ruleNames =  [ "program", "infoPart", "variableDeclarationPart", "variableDeclaration", 
-                   "identifierList", "varType", "block", "statements", "statement", 
+    ruleNames =  [ "program", "programName", "varDeclaration", "varName", 
+                   "varID", "varType", "block", "statements", "statement", 
                    "writelnReadln", "readln", "writeln", "assignmentStatement", 
                    "expressions", "expression", "operators", "blockBody" ]
 
@@ -122,26 +122,25 @@ class PascalParser ( Parser ):
     T__6=7
     T__7=8
     T__8=9
-    T__9=10
-    SEMI=11
-    COLON=12
-    COMMA=13
-    DOT=14
-    LPAREN=15
-    RPAREN=16
-    ASSIGN=17
-    PLUS=18
-    MINUS=19
-    MUL=20
-    SLASH=21
-    DIV=22
-    MOD=23
-    ID=24
-    CONST_INT=25
-    CONST_STR=26
-    WS=27
-    COMMENT1=28
-    COMMENT2=29
+    SEMI=10
+    COLON=11
+    COMMA=12
+    DOT=13
+    LPAREN=14
+    RPAREN=15
+    ASSIGN=16
+    PLUS=17
+    MINUS=18
+    MUL=19
+    SLASH=20
+    DIV=21
+    MOD=22
+    ID=23
+    CONST_INT=24
+    CONST_STR=25
+    WS=26
+    COMMENT1=27
+    COMMENT2=28
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -166,12 +165,12 @@ class PascalParser ( Parser ):
         def DOT(self):
             return self.getToken(PascalParser.DOT, 0)
 
-        def infoPart(self):
-            return self.getTypedRuleContext(PascalParser.InfoPartContext,0)
+        def programName(self):
+            return self.getTypedRuleContext(PascalParser.ProgramNameContext,0)
 
 
-        def variableDeclarationPart(self):
-            return self.getTypedRuleContext(PascalParser.VariableDeclarationPartContext,0)
+        def varDeclaration(self):
+            return self.getTypedRuleContext(PascalParser.VarDeclarationContext,0)
 
 
         def getRuleIndex(self):
@@ -184,6 +183,12 @@ class PascalParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProgram" ):
                 listener.exitProgram(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProgram" ):
+                return visitor.visitProgram(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -200,7 +205,7 @@ class PascalParser ( Parser ):
             _la = self._input.LA(1)
             if _la==PascalParser.T__0:
                 self.state = 34
-                self.infoPart()
+                self.programName()
 
 
             self.state = 38
@@ -208,7 +213,7 @@ class PascalParser ( Parser ):
             _la = self._input.LA(1)
             if _la==PascalParser.T__1:
                 self.state = 37
-                self.variableDeclarationPart()
+                self.varDeclaration()
 
 
             self.state = 40
@@ -224,7 +229,7 @@ class PascalParser ( Parser ):
         return localctx
 
 
-    class InfoPartContext(ParserRuleContext):
+    class ProgramNameContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -235,23 +240,29 @@ class PascalParser ( Parser ):
             return self.getToken(PascalParser.SEMI, 0)
 
         def getRuleIndex(self):
-            return PascalParser.RULE_infoPart
+            return PascalParser.RULE_programName
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInfoPart" ):
-                listener.enterInfoPart(self)
+            if hasattr( listener, "enterProgramName" ):
+                listener.enterProgramName(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInfoPart" ):
-                listener.exitInfoPart(self)
+            if hasattr( listener, "exitProgramName" ):
+                listener.exitProgramName(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProgramName" ):
+                return visitor.visitProgramName(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
 
-    def infoPart(self):
+    def programName(self):
 
-        localctx = PascalParser.InfoPartContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 2, self.RULE_infoPart)
+        localctx = PascalParser.ProgramNameContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 2, self.RULE_programName)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 43
@@ -281,18 +292,18 @@ class PascalParser ( Parser ):
         return localctx
 
 
-    class VariableDeclarationPartContext(ParserRuleContext):
+    class VarDeclarationContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def variableDeclaration(self, i:int=None):
+        def varName(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(PascalParser.VariableDeclarationContext)
+                return self.getTypedRuleContexts(PascalParser.VarNameContext)
             else:
-                return self.getTypedRuleContext(PascalParser.VariableDeclarationContext,i)
+                return self.getTypedRuleContext(PascalParser.VarNameContext,i)
 
 
         def SEMI(self, i:int=None):
@@ -302,29 +313,35 @@ class PascalParser ( Parser ):
                 return self.getToken(PascalParser.SEMI, i)
 
         def getRuleIndex(self):
-            return PascalParser.RULE_variableDeclarationPart
+            return PascalParser.RULE_varDeclaration
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterVariableDeclarationPart" ):
-                listener.enterVariableDeclarationPart(self)
+            if hasattr( listener, "enterVarDeclaration" ):
+                listener.enterVarDeclaration(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitVariableDeclarationPart" ):
-                listener.exitVariableDeclarationPart(self)
+            if hasattr( listener, "exitVarDeclaration" ):
+                listener.exitVarDeclaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVarDeclaration" ):
+                return visitor.visitVarDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
 
-    def variableDeclarationPart(self):
+    def varDeclaration(self):
 
-        localctx = PascalParser.VariableDeclarationPartContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_variableDeclarationPart)
+        localctx = PascalParser.VarDeclarationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 4, self.RULE_varDeclaration)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 51
             self.match(PascalParser.T__1)
             self.state = 52
-            self.variableDeclaration()
+            self.varName()
             self.state = 57
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,3,self._ctx)
@@ -333,7 +350,7 @@ class PascalParser ( Parser ):
                     self.state = 53
                     self.match(PascalParser.SEMI)
                     self.state = 54
-                    self.variableDeclaration() 
+                    self.varName() 
                 self.state = 59
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,3,self._ctx)
@@ -349,15 +366,15 @@ class PascalParser ( Parser ):
         return localctx
 
 
-    class VariableDeclarationContext(ParserRuleContext):
+    class VarNameContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def identifierList(self):
-            return self.getTypedRuleContext(PascalParser.IdentifierListContext,0)
+        def varID(self):
+            return self.getTypedRuleContext(PascalParser.VarIDContext,0)
 
 
         def COLON(self):
@@ -368,27 +385,33 @@ class PascalParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return PascalParser.RULE_variableDeclaration
+            return PascalParser.RULE_varName
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterVariableDeclaration" ):
-                listener.enterVariableDeclaration(self)
+            if hasattr( listener, "enterVarName" ):
+                listener.enterVarName(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitVariableDeclaration" ):
-                listener.exitVariableDeclaration(self)
+            if hasattr( listener, "exitVarName" ):
+                listener.exitVarName(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVarName" ):
+                return visitor.visitVarName(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
 
-    def variableDeclaration(self):
+    def varName(self):
 
-        localctx = PascalParser.VariableDeclarationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_variableDeclaration)
+        localctx = PascalParser.VarNameContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 6, self.RULE_varName)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 62
-            self.identifierList()
+            self.varID()
             self.state = 63
             self.match(PascalParser.COLON)
             self.state = 64
@@ -402,7 +425,7 @@ class PascalParser ( Parser ):
         return localctx
 
 
-    class IdentifierListContext(ParserRuleContext):
+    class VarIDContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -422,23 +445,29 @@ class PascalParser ( Parser ):
                 return self.getToken(PascalParser.COMMA, i)
 
         def getRuleIndex(self):
-            return PascalParser.RULE_identifierList
+            return PascalParser.RULE_varID
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIdentifierList" ):
-                listener.enterIdentifierList(self)
+            if hasattr( listener, "enterVarID" ):
+                listener.enterVarID(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIdentifierList" ):
-                listener.exitIdentifierList(self)
+            if hasattr( listener, "exitVarID" ):
+                listener.exitVarID(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVarID" ):
+                return visitor.visitVarID(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
 
-    def identifierList(self):
+    def varID(self):
 
-        localctx = PascalParser.IdentifierListContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_identifierList)
+        localctx = PascalParser.VarIDContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 8, self.RULE_varID)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -484,6 +513,12 @@ class PascalParser ( Parser ):
             if hasattr( listener, "exitVarType" ):
                 listener.exitVarType(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVarType" ):
+                return visitor.visitVarType(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -496,7 +531,7 @@ class PascalParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 74
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PascalParser.T__2) | (1 << PascalParser.T__3) | (1 << PascalParser.T__4) | (1 << PascalParser.T__5))) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PascalParser.T__2) | (1 << PascalParser.T__3) | (1 << PascalParser.T__4))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -535,6 +570,12 @@ class PascalParser ( Parser ):
             if hasattr( listener, "exitBlock" ):
                 listener.exitBlock(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlock" ):
+                return visitor.visitBlock(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -546,7 +587,7 @@ class PascalParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 76
-            self.match(PascalParser.T__6)
+            self.match(PascalParser.T__5)
             self.state = 77
             self.statements()
             self.state = 79
@@ -558,7 +599,7 @@ class PascalParser ( Parser ):
 
 
             self.state = 81
-            self.match(PascalParser.T__7)
+            self.match(PascalParser.T__6)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -598,6 +639,12 @@ class PascalParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStatements" ):
                 listener.exitStatements(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStatements" ):
+                return visitor.visitStatements(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -669,6 +716,12 @@ class PascalParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStatement" ):
                 listener.exitStatement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStatement" ):
+                return visitor.visitStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -760,6 +813,12 @@ class PascalParser ( Parser ):
             if hasattr( listener, "exitWritelnReadln" ):
                 listener.exitWritelnReadln(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWritelnReadln" ):
+                return visitor.visitWritelnReadln(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -770,7 +829,7 @@ class PascalParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 98
-            self.match(PascalParser.T__8)
+            self.match(PascalParser.T__7)
             self.state = 99
             self.match(PascalParser.LPAREN)
             self.state = 100
@@ -780,7 +839,7 @@ class PascalParser ( Parser ):
             self.state = 102
             self.match(PascalParser.SEMI)
             self.state = 103
-            self.match(PascalParser.T__9)
+            self.match(PascalParser.T__8)
             self.state = 104
             self.match(PascalParser.LPAREN)
             self.state = 105
@@ -806,8 +865,8 @@ class PascalParser ( Parser ):
         def LPAREN(self):
             return self.getToken(PascalParser.LPAREN, 0)
 
-        def identifierList(self):
-            return self.getTypedRuleContext(PascalParser.IdentifierListContext,0)
+        def varID(self):
+            return self.getTypedRuleContext(PascalParser.VarIDContext,0)
 
 
         def RPAREN(self):
@@ -824,6 +883,12 @@ class PascalParser ( Parser ):
             if hasattr( listener, "exitReadln" ):
                 listener.exitReadln(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReadln" ):
+                return visitor.visitReadln(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -834,11 +899,11 @@ class PascalParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 108
-            self.match(PascalParser.T__9)
+            self.match(PascalParser.T__8)
             self.state = 109
             self.match(PascalParser.LPAREN)
             self.state = 110
-            self.identifierList()
+            self.varID()
             self.state = 111
             self.match(PascalParser.RPAREN)
         except RecognitionException as re:
@@ -878,6 +943,12 @@ class PascalParser ( Parser ):
             if hasattr( listener, "exitWriteln" ):
                 listener.exitWriteln(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWriteln" ):
+                return visitor.visitWriteln(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -888,7 +959,7 @@ class PascalParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 113
-            self.match(PascalParser.T__8)
+            self.match(PascalParser.T__7)
             self.state = 114
             self.match(PascalParser.LPAREN)
             self.state = 115
@@ -931,6 +1002,12 @@ class PascalParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAssignmentStatement" ):
                 listener.exitAssignmentStatement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAssignmentStatement" ):
+                return visitor.visitAssignmentStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -986,6 +1063,12 @@ class PascalParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExpressions" ):
                 listener.exitExpressions(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExpressions" ):
+                return visitor.visitExpressions(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1066,6 +1149,12 @@ class PascalParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExpression" ):
                 listener.exitExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExpression" ):
+                return visitor.visitExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1160,6 +1249,12 @@ class PascalParser ( Parser ):
             if hasattr( listener, "exitOperators" ):
                 listener.exitOperators(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOperators" ):
+                return visitor.visitOperators(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1207,6 +1302,12 @@ class PascalParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBlockBody" ):
                 listener.exitBlockBody(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlockBody" ):
+                return visitor.visitBlockBody(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
