@@ -35,6 +35,24 @@ class PascalListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PascalParser#funcDeclaration.
+    def enterFuncDeclaration(self, ctx:PascalParser.FuncDeclarationContext):
+        pass
+
+    # Exit a parse tree produced by PascalParser#funcDeclaration.
+    def exitFuncDeclaration(self, ctx:PascalParser.FuncDeclarationContext):
+        pass
+
+
+    # Enter a parse tree produced by PascalParser#procDeclaration.
+    def enterProcDeclaration(self, ctx:PascalParser.ProcDeclarationContext):
+        pass
+
+    # Exit a parse tree produced by PascalParser#procDeclaration.
+    def exitProcDeclaration(self, ctx:PascalParser.ProcDeclarationContext):
+        pass
+
+
     # Enter a parse tree produced by PascalParser#varDeclarationBlock.
     def enterVarDeclarationBlock(self, ctx:PascalParser.VarDeclarationBlockContext):
         pass
@@ -59,6 +77,42 @@ class PascalListener(ParseTreeListener):
 
     # Exit a parse tree produced by PascalParser#varType.
     def exitVarType(self, ctx:PascalParser.VarTypeContext):
+        pass
+
+
+    # Enter a parse tree produced by PascalParser#argumentList.
+    def enterArgumentList(self, ctx:PascalParser.ArgumentListContext):
+        pass
+
+    # Exit a parse tree produced by PascalParser#argumentList.
+    def exitArgumentList(self, ctx:PascalParser.ArgumentListContext):
+        pass
+
+
+    # Enter a parse tree produced by PascalParser#funcCall.
+    def enterFuncCall(self, ctx:PascalParser.FuncCallContext):
+        pass
+
+    # Exit a parse tree produced by PascalParser#funcCall.
+    def exitFuncCall(self, ctx:PascalParser.FuncCallContext):
+        pass
+
+
+    # Enter a parse tree produced by PascalParser#procCall.
+    def enterProcCall(self, ctx:PascalParser.ProcCallContext):
+        pass
+
+    # Exit a parse tree produced by PascalParser#procCall.
+    def exitProcCall(self, ctx:PascalParser.ProcCallContext):
+        pass
+
+
+    # Enter a parse tree produced by PascalParser#parameter.
+    def enterParameter(self, ctx:PascalParser.ParameterContext):
+        pass
+
+    # Exit a parse tree produced by PascalParser#parameter.
+    def exitParameter(self, ctx:PascalParser.ParameterContext):
         pass
 
 

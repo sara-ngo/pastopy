@@ -1,14 +1,25 @@
 grammar Pascal;
 
-// parser
+// parser = rules for Pascal grammar
+// func: return a single value, proc: do not return anything
+// ?: either have or not is fine
+// .+?: any char/word/string
+// *: allow repeat multiple times
+
 program:
-    (programName)? (varDeclaration)? block DOT;
+    (programName)? (varDeclaration)? (funcDeclaration)? (procDeclaration)? block DOT;
 
 programName:
     'program' .+? SEMI;
 
 varDeclaration:
     'var' varDeclarationBlock (SEMI varDeclarationBlock)* SEMI;
+
+funcDeclaration:
+    'function' ID LPAREN (argumentList)? RPAREN COLON varType SEMI varDeclaration block SEMI;
+
+procDeclaration:
+    'procedure' ID LPAREN (argumentList)? RPAREN SEMI varDeclaration block SEMI;
 
 varDeclarationBlock:
     varName COLON varType;
@@ -18,6 +29,19 @@ varName:
 
 varType:
     ('integer' | 'string' | 'real' | 'boolean');
+
+argumentList:
+    varName COLON varType;
+
+funcCall:
+    ID LPAREN parameter RPAREN;
+
+procCall:
+    ID LPAREN parameter RPAREN SEMI;
+
+parameter:
+    |
+    expression (SEMI expression)*;
 
 block:
     'begin' statements SEMI? 'end';
@@ -32,6 +56,7 @@ statement:
     | block
     | assignmentStatement
     | ifStatement
+    | funcCall
     ;
 
 writelnReadln:
@@ -51,7 +76,7 @@ expressions:
     expression (COMMA expression)*;
 
 expression:
-    (LPAREN expression RPAREN | CONST_INT | CONST_STR | ID) (operators expression)*;
+    (LPAREN expression RPAREN | CONST_INT | CONST_STR | ID | funcCall) (operators expression)*;
 
 operators:
     EQUAL | NOT_EQUAL | LT | LE | GE | GT | OR | AND | DIV | MOD | PLUS | MINUS | STAR | SLASH;
