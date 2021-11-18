@@ -8,15 +8,15 @@ var
 
 function max(): string;
 var
-   result : real;
+   result : string;
 
 begin
-   writeln('works');
+   writeln('function max works');
 end;
 
 begin
    a := 100;
    b := 200;
-   max(); //work with empty arg
+   max();
    writeln( 'Max value is : ', a);
 end.

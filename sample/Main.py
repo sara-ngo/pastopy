@@ -118,7 +118,7 @@ def main(filename):
     os.system('python result.py')  # execute result.py
     open('result.py', 'w').close()  # clean and close result.py
 
-    print(listener.var_ls)       # display parse tree
+    # print(listener.var_ls)
 
 
 if __name__ == '__main__':
