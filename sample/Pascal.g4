@@ -1,7 +1,6 @@
 grammar Pascal;
 
 // parser
-
 program:
     (programName)? (varDeclaration)? block DOT;
 
@@ -9,16 +8,16 @@ programName:
     'program' .+? SEMI;
 
 varDeclaration:
-    'var' varName (SEMI varName)* SEMI;
+    'var' varDeclarationBlock (SEMI varDeclarationBlock)* SEMI;
+
+varDeclarationBlock:
+    varName COLON varType;
 
 varName:
-    varID COLON varType;
-
-varID:
     ID (COMMA ID)*;
 
 varType:
-    ('integer' | 'real' | 'string');
+    ('integer' | 'string' | 'real' | 'boolean');
 
 block:
     'begin' statements SEMI? 'end';
@@ -32,6 +31,7 @@ statement:
     | writeln
     | block
     | assignmentStatement
+    | ifStatement
     ;
 
 writelnReadln:
@@ -39,7 +39,7 @@ writelnReadln:
     'readln' LPAREN ID RPAREN;
 
 readln:
-    'readln' LPAREN varID RPAREN;
+    'readln' LPAREN varName RPAREN;
 
 writeln:
     'writeln' LPAREN expressions RPAREN;
@@ -54,13 +54,18 @@ expression:
     (LPAREN expression RPAREN | CONST_INT | CONST_STR | ID) (operators expression)*;
 
 operators:
-    DIV | MOD | PLUS | MINUS | MUL | SLASH;
+    EQUAL | NOT_EQUAL | LT | LE | GE | GT | OR | AND | DIV | MOD | PLUS | MINUS | STAR | SLASH;
+
+ifStatement:
+    'if' expression 'then' (block|blockBody) elseStatement?;
+
+elseStatement:
+    'else' (block|blockBody);
 
 blockBody:
     statement;
 
 // lexer
-
 SEMI: ';';
 COLON: ':';
 COMMA: ',';
@@ -71,14 +76,22 @@ ASSIGN: ':=';
 
 PLUS: '+';
 MINUS: '-';
-MUL: '*';
+STAR: '*';
 SLASH: '/';
 DIV: '//';
 MOD: '%';
+
+EQUAL: '=';
+NOT_EQUAL: '<>';
+LT: '<';
+LE: '<=';
+GT: '>';
+GE: '>=';
+OR: 'or';
+AND: 'and';
 
 ID: [a-zA-Z][a-zA-Z0-9_]*;
 CONST_INT: [0-9]+;
 CONST_STR: '\'' ('\'\'' | ~ ('\''))* '\'';
 WS: [ \t\r\n]+ -> skip;
-COMMENT1: '(*' .*? '*)' -> skip;
-COMMENT2: '{' .*? '}' -> skip;
+COMMENT: '(*' .*? '*)' -> skip;

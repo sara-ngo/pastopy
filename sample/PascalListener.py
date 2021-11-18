@@ -35,21 +35,21 @@ class PascalListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PascalParser#varDeclarationBlock.
+    def enterVarDeclarationBlock(self, ctx:PascalParser.VarDeclarationBlockContext):
+        pass
+
+    # Exit a parse tree produced by PascalParser#varDeclarationBlock.
+    def exitVarDeclarationBlock(self, ctx:PascalParser.VarDeclarationBlockContext):
+        pass
+
+
     # Enter a parse tree produced by PascalParser#varName.
     def enterVarName(self, ctx:PascalParser.VarNameContext):
         pass
 
     # Exit a parse tree produced by PascalParser#varName.
     def exitVarName(self, ctx:PascalParser.VarNameContext):
-        pass
-
-
-    # Enter a parse tree produced by PascalParser#varID.
-    def enterVarID(self, ctx:PascalParser.VarIDContext):
-        pass
-
-    # Exit a parse tree produced by PascalParser#varID.
-    def exitVarID(self, ctx:PascalParser.VarIDContext):
         pass
 
 
@@ -149,6 +149,24 @@ class PascalListener(ParseTreeListener):
 
     # Exit a parse tree produced by PascalParser#operators.
     def exitOperators(self, ctx:PascalParser.OperatorsContext):
+        pass
+
+
+    # Enter a parse tree produced by PascalParser#ifStatement.
+    def enterIfStatement(self, ctx:PascalParser.IfStatementContext):
+        pass
+
+    # Exit a parse tree produced by PascalParser#ifStatement.
+    def exitIfStatement(self, ctx:PascalParser.IfStatementContext):
+        pass
+
+
+    # Enter a parse tree produced by PascalParser#elseStatement.
+    def enterElseStatement(self, ctx:PascalParser.ElseStatementContext):
+        pass
+
+    # Exit a parse tree produced by PascalParser#elseStatement.
+    def exitElseStatement(self, ctx:PascalParser.ElseStatementContext):
         pass
 
 

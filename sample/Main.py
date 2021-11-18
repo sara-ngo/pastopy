@@ -11,24 +11,26 @@ from PascalListener import PascalListener
 from PascalParser import PascalParser
 
 KEYWORDS = (
-    'var', 'integer', 'int64', 'real', 'string',
+    'var', 'integer', 'int64',
     'begin', 'end', 'program',
     'readln', 'writeln',
     'mod', 'div', 'or', 'and',
+    'if', 'then', 'else', 'while', 'do',
 )
+
 
 class Listener(PascalListener):
     def __init__(self):
         self.var_ls = {}
         self.spaces = -4
 
-    def exitInfoPart(self, ctx: PascalParser.ProgramNameContext):
+    def exitProgramName(self, ctx: PascalParser.ProgramNameContext):
         text = ctx.getText().split("program")[-1]
         self._print(f"#program {text}")
 
-    def exitVariableDeclaration(self, ctx: PascalParser.VarDeclarationContext):
+    def exitVarDeclarationBlock(self, ctx: PascalParser.VarDeclarationBlockContext):
         var_type = ctx.varType().getText()
-        for i in ctx.identifierList().getText().split(','):
+        for i in ctx.varName().getText().split(','):
             self.var_ls[i] = var_type
 
     def exitWritelnReadln(self, ctx: PascalParser.WritelnReadlnContext):
@@ -37,7 +39,7 @@ class Listener(PascalListener):
         self._print_input(var, const)
 
     def enterReadln(self, ctx: PascalParser.ReadlnContext):
-        for i in ctx.identifierList().getText().split(','):
+        for i in ctx.varName().getText().split(','):
             self._print_input(i)
 
     def exitWriteln(self, ctx: PascalParser.WritelnContext):
@@ -47,6 +49,12 @@ class Listener(PascalListener):
         var = ctx.ID().getText()
         expr = ctx.expression().getText()
         self._print(f'{var} = {expr}')
+
+    def enterIfStatement(self, ctx: PascalParser.IfStatementContext):
+        self._print(f'if {ctx.expression().getText()}:')
+
+    def enterElseStatement(self, ctx: PascalParser.ElseStatementContext):
+        self._print('else:')
 
     def enterBlock(self, ctx: PascalParser.BlockContext):
         self.spaces += 4
@@ -69,20 +77,17 @@ class Listener(PascalListener):
             raise NotImplementedError
 
     def _get_var_type(self, var):
+        type_list = {'integer': 'int', 'string': 'str', 'real': 'float', 'boolean': 'bool'}
         try:
             var_type = self.var_ls[var]
         except KeyError:
             raise ValueError(f'variable {var} not defined')
-        if var_type in ('integer', 'int64'):
-            return 'int'
-        elif var_type in ('real'):
-            return 'float'
-        elif var_type  in ('string'):
-            return 'string'
+        if var_type in type_list.keys():
+            print(type_list.get(var_type))
         else:
             raise NotImplementedError(var_type)
 
-    def _print(self, line):  # print line by line
+    def _print(self, line):
         with open("result.py", "a") as f:
             code = ' ' * self.spaces + line + "\n"
             f.write(code)
@@ -113,17 +118,18 @@ def main(filename):
     os.system('python result.py')  # execute result.py
     open('result.py', 'w').close()  # clean and close result.py
 
-    # print(listener.var_ls) # display parse tree
+    print(listener.var_ls)       # display parse tree
+
 
 if __name__ == '__main__':
     if len(sys.argv) == 2:
         main(sys.argv[1])
     else:
-        main('test/test1.pas')
+        # main('test/test1.pas')
         # main('test/test2.pas')
         # main('test/test3.pas')
         # main('test/test4.pas')
-        # main('test/test5.pas')
+        main('test/test5.pas')
         # main('test/test6.pas')
         # main('test/test7.pas')
         # main('test/test8.pas')
