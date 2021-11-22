@@ -33,6 +33,10 @@ class Listener(PascalListener):
         for i in ctx.varName().getText().split(','):
             self.var_ls[i] = var_type
 
+    def exitFuncDeclaration(self, ctx: PascalParser.FuncDeclarationContext):
+        def_name = ctx.getText()
+        print(def_name)
+
     def exitWritelnReadln(self, ctx: PascalParser.WritelnReadlnContext):
         var = ctx.ID().getText()
         const = ctx.CONST_STR().getText()
@@ -125,7 +129,7 @@ if __name__ == '__main__':
     if len(sys.argv) == 2:
         main(sys.argv[1])
     else:
-        main('test/test1.pas')
+        # main('test/test1.pas')
         # main('test/test2.pas')
         # main('test/test3.pas')
         # main('test/test4.pas')

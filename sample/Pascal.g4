@@ -90,7 +90,7 @@ elseStatement:
 blockBody:
     statement;
 
-// lexer
+// lexer = produce tokens from input
 SEMI: ';';
 COLON: ':';
 COMMA: ',';

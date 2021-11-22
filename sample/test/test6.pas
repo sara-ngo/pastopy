@@ -2,21 +2,18 @@
 program exFunction;
 
 var
-   a : real;
-   b : real;
-   ret : real;
+   a : string;
 
-function max(): string;
+function printAstring(): string;
 var
    result : string;
 
 begin
-   writeln('function max works');
+   writeln('function printAstring works.');
 end;
 
 begin
-   a := 100;
-   b := 200;
-   max();
-   writeln( 'Max value is : ', a);
+   a := 'Begin';
+   printAstring();
+   writeln(a);
 end.
