@@ -18,7 +18,6 @@ KEYWORDS = (
     'if', 'then', 'else',
 )
 
-
 class Listener(PascalListener):
     def __init__(self):
         self.var_ls = {}
@@ -33,9 +32,21 @@ class Listener(PascalListener):
         for i in ctx.varName().getText().split(','):
             self.var_ls[i] = var_type
 
-    def exitFuncDeclaration(self, ctx: PascalParser.FuncDeclarationContext):
-        def_name = ctx.getText()
-        print(def_name)
+    # working...
+    def enterFuncDeclaration(self, ctx: PascalParser.FuncDeclarationContext):
+        self.spaces -= 0
+        text = ctx.getText().split(';')[0].split('function')[1]
+        type = ('string','integer','real','boolean','char')
+        for i in type:
+            if i in text:
+                text = text.replace(i, '')
+        if ':' in text:
+            text = text.replace(':', '')
+        self._print(f"def {text}:")
+
+    def exitFuncDeclaration(self, ctx:PascalParser.FuncDeclarationContext):
+        text = ctx.getText().split(';')[-3].split(':')[0]
+        self._print(f'    return {text}')
 
     def exitWritelnReadln(self, ctx: PascalParser.WritelnReadlnContext):
         var = ctx.ID().getText()
@@ -59,6 +70,12 @@ class Listener(PascalListener):
 
     def enterElseStatement(self, ctx: PascalParser.ElseStatementContext):
         self._print('else:')
+
+    def enterCompoundStatement(self, ctx: PascalParser.CompoundStatementContext):
+        self.spaces += 0
+
+    def exitCompoundStatement(self, ctx: PascalParser.CompoundStatementContext):
+        self.spaces -= 4
 
     def enterBlock(self, ctx: PascalParser.BlockContext):
         self.spaces += 4
@@ -134,8 +151,7 @@ if __name__ == '__main__':
         # main('test/test3.pas')
         # main('test/test4.pas')
         # main('test/test5.pas')
-        main('test/test6.pas')
+        # main('test/test6.pas')
         # main('test/test7.pas')
-        # main('test/test8.pas')
-        # main('test/test9.pas')
-        # main('test/test10.pas')
+        main('test/test8.pas')
+

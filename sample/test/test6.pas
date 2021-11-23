@@ -1,19 +1,18 @@
-(*test function*)
-program exFunction;
+(*test function - with no parameters*)
+program function1;
 
 var
    a : string;
 
-function printAstring(): string;
+function printString(a: string): string;
 var
    result : string;
-
 begin
-   writeln('function printAstring works.');
+   writeln('function works');
 end;
 
 begin
-   a := 'Begin';
-   printAstring();
+   a := 'This is A';
+   printString(a);
    writeln(a);
 end.

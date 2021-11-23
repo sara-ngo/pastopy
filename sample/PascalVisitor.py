@@ -19,6 +19,11 @@ class PascalVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by PascalParser#block.
+    def visitBlock(self, ctx:PascalParser.BlockContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by PascalParser#varDeclaration.
     def visitVarDeclaration(self, ctx:PascalParser.VarDeclarationContext):
         return self.visitChildren(ctx)
@@ -29,8 +34,8 @@ class PascalVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PascalParser#procDeclaration.
-    def visitProcDeclaration(self, ctx:PascalParser.ProcDeclarationContext):
+    # Visit a parse tree produced by PascalParser#funcDeclarationBlock.
+    def visitFuncDeclarationBlock(self, ctx:PascalParser.FuncDeclarationBlockContext):
         return self.visitChildren(ctx)
 
 
@@ -59,18 +64,13 @@ class PascalVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PascalParser#procCall.
-    def visitProcCall(self, ctx:PascalParser.ProcCallContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by PascalParser#parameter.
     def visitParameter(self, ctx:PascalParser.ParameterContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PascalParser#block.
-    def visitBlock(self, ctx:PascalParser.BlockContext):
+    # Visit a parse tree produced by PascalParser#compoundStatement.
+    def visitCompoundStatement(self, ctx:PascalParser.CompoundStatementContext):
         return self.visitChildren(ctx)
 
 

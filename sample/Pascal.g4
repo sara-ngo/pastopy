@@ -7,19 +7,22 @@ grammar Pascal;
 // *: allow repeat multiple times
 
 program:
-    (programName)? (varDeclaration)? (funcDeclaration)? (procDeclaration)? block DOT;
+    programName block DOT;
 
 programName:
-    'program' .+? SEMI;
+    'program' ID SEMI;
+
+block:
+    (varDeclaration | funcDeclaration)* compoundStatement ;
 
 varDeclaration:
     'var' varDeclarationBlock (SEMI varDeclarationBlock)* SEMI;
 
 funcDeclaration:
-    'function' ID LPAREN (argumentList)? RPAREN COLON varType SEMI varDeclaration block SEMI;
+    funcDeclarationBlock SEMI;
 
-procDeclaration:
-    'procedure' ID LPAREN (argumentList)? RPAREN SEMI varDeclaration block SEMI;
+funcDeclarationBlock:
+    'function' ID (argumentList)? COLON varType SEMI block;
 
 varDeclarationBlock:
     varName COLON varType;
@@ -28,22 +31,18 @@ varName:
     ID (COMMA ID)*;
 
 varType:
-    ('integer' | 'string' | 'real' | 'boolean');
+    ('char' | 'integer' | 'string' | 'real' | 'boolean');
 
 argumentList:
-    varName COLON varType;
+    LPAREN varName COLON varType RPAREN;
 
 funcCall:
-    ID LPAREN parameter RPAREN;
-
-procCall:
-    ID LPAREN parameter RPAREN SEMI;
+    ID LPAREN (parameter)? RPAREN;
 
 parameter:
-    |
-    expression (SEMI expression)*;
+    expression (COMMA expression)*;
 
-block:
+compoundStatement:
     'begin' statements SEMI? 'end';
 
 statements:

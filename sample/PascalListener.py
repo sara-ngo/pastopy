@@ -26,6 +26,15 @@ class PascalListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PascalParser#block.
+    def enterBlock(self, ctx:PascalParser.BlockContext):
+        pass
+
+    # Exit a parse tree produced by PascalParser#block.
+    def exitBlock(self, ctx:PascalParser.BlockContext):
+        pass
+
+
     # Enter a parse tree produced by PascalParser#varDeclaration.
     def enterVarDeclaration(self, ctx:PascalParser.VarDeclarationContext):
         pass
@@ -44,12 +53,12 @@ class PascalListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PascalParser#procDeclaration.
-    def enterProcDeclaration(self, ctx:PascalParser.ProcDeclarationContext):
+    # Enter a parse tree produced by PascalParser#funcDeclarationBlock.
+    def enterFuncDeclarationBlock(self, ctx:PascalParser.FuncDeclarationBlockContext):
         pass
 
-    # Exit a parse tree produced by PascalParser#procDeclaration.
-    def exitProcDeclaration(self, ctx:PascalParser.ProcDeclarationContext):
+    # Exit a parse tree produced by PascalParser#funcDeclarationBlock.
+    def exitFuncDeclarationBlock(self, ctx:PascalParser.FuncDeclarationBlockContext):
         pass
 
 
@@ -98,15 +107,6 @@ class PascalListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PascalParser#procCall.
-    def enterProcCall(self, ctx:PascalParser.ProcCallContext):
-        pass
-
-    # Exit a parse tree produced by PascalParser#procCall.
-    def exitProcCall(self, ctx:PascalParser.ProcCallContext):
-        pass
-
-
     # Enter a parse tree produced by PascalParser#parameter.
     def enterParameter(self, ctx:PascalParser.ParameterContext):
         pass
@@ -116,12 +116,12 @@ class PascalListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PascalParser#block.
-    def enterBlock(self, ctx:PascalParser.BlockContext):
+    # Enter a parse tree produced by PascalParser#compoundStatement.
+    def enterCompoundStatement(self, ctx:PascalParser.CompoundStatementContext):
         pass
 
-    # Exit a parse tree produced by PascalParser#block.
-    def exitBlock(self, ctx:PascalParser.BlockContext):
+    # Exit a parse tree produced by PascalParser#compoundStatement.
+    def exitCompoundStatement(self, ctx:PascalParser.CompoundStatementContext):
         pass
 
 
