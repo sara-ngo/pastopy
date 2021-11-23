@@ -1,5 +1,3 @@
-(* LET <var1> = <var2>;
-throw error if var1 is undefined - unfinished*)
 program testcase1;
 
 var

@@ -1,5 +1,3 @@
-(* PRINT(<var1>);
-throw error if undefined - unfinished*)
 program testcase5;
 
 var
