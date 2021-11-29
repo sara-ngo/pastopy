@@ -13,7 +13,7 @@ from PascalParser import PascalParser
 KEYWORDS = (
     'var', 'integer', 'string', 'real', 'boolean',
     'begin', 'end', 'program', 'function', 'procedure',
-    'readln', 'writeln',
+     'writeln',
     'mod', 'div', 'or', 'and',
     'if', 'then', 'else',
 )
@@ -32,7 +32,6 @@ class Listener(PascalListener):
         for i in ctx.varName().getText().split(','):
             self.var_ls[i] = var_type
 
-    # working...
     def enterFuncDeclaration(self, ctx: PascalParser.FuncDeclarationContext):
         self.spaces -= 0
         text = ctx.getText().split(';')[0].split('function')[1]
@@ -48,14 +47,6 @@ class Listener(PascalListener):
         text = ctx.getText().split(';')[-3].split(':')[0]
         self._print(f'    return {text}')
 
-    def exitWritelnReadln(self, ctx: PascalParser.WritelnReadlnContext):
-        var = ctx.ID().getText()
-        const = ctx.CONST_STR().getText()
-        self._print_input(var, const)
-
-    def enterReadln(self, ctx: PascalParser.ReadlnContext):
-        for i in ctx.varName().getText().split(','):
-            self._print_input(i)
 
     def exitWriteln(self, ctx: PascalParser.WritelnContext):
         self._print('print({})'.format(ctx.expressions().getText()))
@@ -109,7 +100,7 @@ class Listener(PascalListener):
             raise NotImplementedError(var_type)
 
     def _print(self, line):
-        with open("result.py", "a") as f:
+        with open("result.py", "a") as f:           # write interpreted code to result.py
             code = ' ' * self.spaces + line + "\n"
             f.write(code)
         print(' ' * self.spaces, line, sep='')
@@ -138,9 +129,7 @@ def main(filename):
     print('\nExecute code in Python:')
     os.system('python result.py')  # execute result.py
     open('result.py', 'w').close()  # clean and close result.py
-
     # print(listener.var_ls)
-
 
 if __name__ == '__main__':
     if len(sys.argv) == 2:
@@ -154,5 +143,5 @@ if __name__ == '__main__':
         # main('test/test5.pas')
         # main('test/test6.pas')
         # main('test/test7.pas')
-        main('test/test8.pas')
+        # main('test/test8.pas')
 

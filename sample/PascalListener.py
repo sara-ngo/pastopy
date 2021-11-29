@@ -143,24 +143,6 @@ class PascalListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PascalParser#writelnReadln.
-    def enterWritelnReadln(self, ctx:PascalParser.WritelnReadlnContext):
-        pass
-
-    # Exit a parse tree produced by PascalParser#writelnReadln.
-    def exitWritelnReadln(self, ctx:PascalParser.WritelnReadlnContext):
-        pass
-
-
-    # Enter a parse tree produced by PascalParser#readln.
-    def enterReadln(self, ctx:PascalParser.ReadlnContext):
-        pass
-
-    # Exit a parse tree produced by PascalParser#readln.
-    def exitReadln(self, ctx:PascalParser.ReadlnContext):
-        pass
-
-
     # Enter a parse tree produced by PascalParser#writeln.
     def enterWriteln(self, ctx:PascalParser.WritelnContext):
         pass

@@ -11,94 +11,84 @@ else:
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3+")
-        buf.write("\u00de\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3*")
+        buf.write("\u00ca\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
-        buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31")
-        buf.write("\t\31\4\32\t\32\3\2\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\4\3")
-        buf.write("\4\7\4?\n\4\f\4\16\4B\13\4\3\4\3\4\3\5\3\5\3\5\3\5\7\5")
-        buf.write("J\n\5\f\5\16\5M\13\5\3\5\3\5\3\6\3\6\3\6\3\7\3\7\3\7\5")
-        buf.write("\7W\n\7\3\7\3\7\3\7\3\7\3\7\3\b\3\b\3\b\3\b\3\t\3\t\3")
-        buf.write("\t\7\te\n\t\f\t\16\th\13\t\3\n\3\n\3\13\3\13\3\13\3\13")
-        buf.write("\3\13\3\13\3\f\3\f\3\f\3\f\3\f\5\fw\n\f\3\r\3\r\3\r\7")
-        buf.write("\r|\n\r\f\r\16\r\177\13\r\3\16\3\16\3\16\5\16\u0084\n")
-        buf.write("\16\3\16\3\16\3\17\3\17\3\17\7\17\u008b\n\17\f\17\16\17")
-        buf.write("\u008e\13\17\3\20\3\20\3\20\3\20\3\20\3\20\3\20\5\20\u0097")
-        buf.write("\n\20\3\21\3\21\3\21\3\21\3\21\3\21\3\21\3\21\3\21\3\21")
-        buf.write("\3\22\3\22\3\22\3\22\3\22\3\23\3\23\3\23\3\23\3\23\3\24")
-        buf.write("\3\24\3\24\3\24\3\25\3\25\3\25\7\25\u00b4\n\25\f\25\16")
-        buf.write("\25\u00b7\13\25\3\26\3\26\3\26\3\26\3\26\3\26\3\26\3\26")
-        buf.write("\5\26\u00c1\n\26\3\26\3\26\3\26\7\26\u00c6\n\26\f\26\16")
-        buf.write("\26\u00c9\13\26\3\27\3\27\3\30\3\30\3\30\3\30\3\30\5\30")
-        buf.write("\u00d2\n\30\3\30\5\30\u00d5\n\30\3\31\3\31\3\31\5\31\u00da")
-        buf.write("\n\31\3\32\3\32\3\32\2\2\33\2\4\6\b\n\f\16\20\22\24\26")
-        buf.write("\30\32\34\36 \"$&(*,.\60\62\2\4\3\2\6\n\3\2\31&\2\u00dc")
-        buf.write("\2\64\3\2\2\2\48\3\2\2\2\6@\3\2\2\2\bE\3\2\2\2\nP\3\2")
-        buf.write("\2\2\fS\3\2\2\2\16]\3\2\2\2\20a\3\2\2\2\22i\3\2\2\2\24")
-        buf.write("k\3\2\2\2\26q\3\2\2\2\30x\3\2\2\2\32\u0080\3\2\2\2\34")
-        buf.write("\u0087\3\2\2\2\36\u0096\3\2\2\2 \u0098\3\2\2\2\"\u00a2")
-        buf.write("\3\2\2\2$\u00a7\3\2\2\2&\u00ac\3\2\2\2(\u00b0\3\2\2\2")
-        buf.write("*\u00c0\3\2\2\2,\u00ca\3\2\2\2.\u00cc\3\2\2\2\60\u00d6")
-        buf.write("\3\2\2\2\62\u00db\3\2\2\2\64\65\5\4\3\2\65\66\5\6\4\2")
-        buf.write("\66\67\7\25\2\2\67\3\3\2\2\289\7\3\2\29:\7\'\2\2:;\7\22")
-        buf.write("\2\2;\5\3\2\2\2<?\5\b\5\2=?\5\n\6\2><\3\2\2\2>=\3\2\2")
-        buf.write("\2?B\3\2\2\2@>\3\2\2\2@A\3\2\2\2AC\3\2\2\2B@\3\2\2\2C")
-        buf.write("D\5\32\16\2D\7\3\2\2\2EF\7\4\2\2FK\5\16\b\2GH\7\22\2\2")
-        buf.write("HJ\5\16\b\2IG\3\2\2\2JM\3\2\2\2KI\3\2\2\2KL\3\2\2\2LN")
-        buf.write("\3\2\2\2MK\3\2\2\2NO\7\22\2\2O\t\3\2\2\2PQ\5\f\7\2QR\7")
-        buf.write("\22\2\2R\13\3\2\2\2ST\7\5\2\2TV\7\'\2\2UW\5\24\13\2VU")
-        buf.write("\3\2\2\2VW\3\2\2\2WX\3\2\2\2XY\7\23\2\2YZ\5\22\n\2Z[\7")
-        buf.write("\22\2\2[\\\5\6\4\2\\\r\3\2\2\2]^\5\20\t\2^_\7\23\2\2_")
-        buf.write("`\5\22\n\2`\17\3\2\2\2af\7\'\2\2bc\7\24\2\2ce\7\'\2\2")
-        buf.write("db\3\2\2\2eh\3\2\2\2fd\3\2\2\2fg\3\2\2\2g\21\3\2\2\2h")
-        buf.write("f\3\2\2\2ij\t\2\2\2j\23\3\2\2\2kl\7\26\2\2lm\5\20\t\2")
-        buf.write("mn\7\23\2\2no\5\22\n\2op\7\27\2\2p\25\3\2\2\2qv\7\'\2")
-        buf.write("\2rs\7\26\2\2st\5\30\r\2tu\7\27\2\2uw\3\2\2\2vr\3\2\2")
-        buf.write("\2vw\3\2\2\2w\27\3\2\2\2x}\5*\26\2yz\7\24\2\2z|\5*\26")
-        buf.write("\2{y\3\2\2\2|\177\3\2\2\2}{\3\2\2\2}~\3\2\2\2~\31\3\2")
-        buf.write("\2\2\177}\3\2\2\2\u0080\u0081\7\13\2\2\u0081\u0083\5\34")
-        buf.write("\17\2\u0082\u0084\7\22\2\2\u0083\u0082\3\2\2\2\u0083\u0084")
-        buf.write("\3\2\2\2\u0084\u0085\3\2\2\2\u0085\u0086\7\f\2\2\u0086")
-        buf.write("\33\3\2\2\2\u0087\u008c\5\36\20\2\u0088\u0089\7\22\2\2")
-        buf.write("\u0089\u008b\5\36\20\2\u008a\u0088\3\2\2\2\u008b\u008e")
-        buf.write("\3\2\2\2\u008c\u008a\3\2\2\2\u008c\u008d\3\2\2\2\u008d")
-        buf.write("\35\3\2\2\2\u008e\u008c\3\2\2\2\u008f\u0097\5 \21\2\u0090")
-        buf.write("\u0097\5\"\22\2\u0091\u0097\5$\23\2\u0092\u0097\5\6\4")
-        buf.write("\2\u0093\u0097\5&\24\2\u0094\u0097\5.\30\2\u0095\u0097")
-        buf.write("\5\26\f\2\u0096\u008f\3\2\2\2\u0096\u0090\3\2\2\2\u0096")
-        buf.write("\u0091\3\2\2\2\u0096\u0092\3\2\2\2\u0096\u0093\3\2\2\2")
-        buf.write("\u0096\u0094\3\2\2\2\u0096\u0095\3\2\2\2\u0097\37\3\2")
-        buf.write("\2\2\u0098\u0099\7\r\2\2\u0099\u009a\7\26\2\2\u009a\u009b")
-        buf.write("\7)\2\2\u009b\u009c\7\27\2\2\u009c\u009d\7\22\2\2\u009d")
-        buf.write("\u009e\7\16\2\2\u009e\u009f\7\26\2\2\u009f\u00a0\7\'\2")
-        buf.write("\2\u00a0\u00a1\7\27\2\2\u00a1!\3\2\2\2\u00a2\u00a3\7\16")
-        buf.write("\2\2\u00a3\u00a4\7\26\2\2\u00a4\u00a5\5\20\t\2\u00a5\u00a6")
-        buf.write("\7\27\2\2\u00a6#\3\2\2\2\u00a7\u00a8\7\r\2\2\u00a8\u00a9")
-        buf.write("\7\26\2\2\u00a9\u00aa\5(\25\2\u00aa\u00ab\7\27\2\2\u00ab")
-        buf.write("%\3\2\2\2\u00ac\u00ad\7\'\2\2\u00ad\u00ae\7\30\2\2\u00ae")
-        buf.write("\u00af\5*\26\2\u00af\'\3\2\2\2\u00b0\u00b5\5*\26\2\u00b1")
-        buf.write("\u00b2\7\24\2\2\u00b2\u00b4\5*\26\2\u00b3\u00b1\3\2\2")
-        buf.write("\2\u00b4\u00b7\3\2\2\2\u00b5\u00b3\3\2\2\2\u00b5\u00b6")
-        buf.write("\3\2\2\2\u00b6)\3\2\2\2\u00b7\u00b5\3\2\2\2\u00b8\u00b9")
-        buf.write("\7\26\2\2\u00b9\u00ba\5*\26\2\u00ba\u00bb\7\27\2\2\u00bb")
-        buf.write("\u00c1\3\2\2\2\u00bc\u00c1\7(\2\2\u00bd\u00c1\7)\2\2\u00be")
-        buf.write("\u00c1\7\'\2\2\u00bf\u00c1\5\26\f\2\u00c0\u00b8\3\2\2")
-        buf.write("\2\u00c0\u00bc\3\2\2\2\u00c0\u00bd\3\2\2\2\u00c0\u00be")
-        buf.write("\3\2\2\2\u00c0\u00bf\3\2\2\2\u00c1\u00c7\3\2\2\2\u00c2")
-        buf.write("\u00c3\5,\27\2\u00c3\u00c4\5*\26\2\u00c4\u00c6\3\2\2\2")
-        buf.write("\u00c5\u00c2\3\2\2\2\u00c6\u00c9\3\2\2\2\u00c7\u00c5\3")
-        buf.write("\2\2\2\u00c7\u00c8\3\2\2\2\u00c8+\3\2\2\2\u00c9\u00c7")
-        buf.write("\3\2\2\2\u00ca\u00cb\t\3\2\2\u00cb-\3\2\2\2\u00cc\u00cd")
-        buf.write("\7\17\2\2\u00cd\u00ce\5*\26\2\u00ce\u00d1\7\20\2\2\u00cf")
-        buf.write("\u00d2\5\6\4\2\u00d0\u00d2\5\62\32\2\u00d1\u00cf\3\2\2")
-        buf.write("\2\u00d1\u00d0\3\2\2\2\u00d2\u00d4\3\2\2\2\u00d3\u00d5")
-        buf.write("\5\60\31\2\u00d4\u00d3\3\2\2\2\u00d4\u00d5\3\2\2\2\u00d5")
-        buf.write("/\3\2\2\2\u00d6\u00d9\7\21\2\2\u00d7\u00da\5\6\4\2\u00d8")
-        buf.write("\u00da\5\62\32\2\u00d9\u00d7\3\2\2\2\u00d9\u00d8\3\2\2")
-        buf.write("\2\u00da\61\3\2\2\2\u00db\u00dc\5\36\20\2\u00dc\63\3\2")
-        buf.write("\2\2\22>@KVfv}\u0083\u008c\u0096\u00b5\u00c0\u00c7\u00d1")
-        buf.write("\u00d4\u00d9")
+        buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\3\2")
+        buf.write("\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\4\3\4\7\4;\n\4\f\4\16\4")
+        buf.write(">\13\4\3\4\3\4\3\5\3\5\3\5\3\5\7\5F\n\5\f\5\16\5I\13\5")
+        buf.write("\3\5\3\5\3\6\3\6\3\6\3\7\3\7\3\7\5\7S\n\7\3\7\3\7\3\7")
+        buf.write("\3\7\3\7\3\b\3\b\3\b\3\b\3\t\3\t\3\t\7\ta\n\t\f\t\16\t")
+        buf.write("d\13\t\3\n\3\n\3\13\3\13\3\13\3\13\3\13\3\13\3\f\3\f\3")
+        buf.write("\f\5\fq\n\f\3\f\3\f\3\r\3\r\3\r\7\rx\n\r\f\r\16\r{\13")
+        buf.write("\r\3\16\3\16\3\16\5\16\u0080\n\16\3\16\3\16\3\17\3\17")
+        buf.write("\3\17\7\17\u0087\n\17\f\17\16\17\u008a\13\17\3\20\3\20")
+        buf.write("\3\20\3\20\3\20\3\20\5\20\u0092\n\20\3\21\3\21\3\21\3")
+        buf.write("\21\3\21\3\22\3\22\3\22\3\22\3\23\3\23\3\23\7\23\u00a0")
+        buf.write("\n\23\f\23\16\23\u00a3\13\23\3\24\3\24\3\24\3\24\3\24")
+        buf.write("\3\24\3\24\3\24\5\24\u00ad\n\24\3\24\3\24\3\24\7\24\u00b2")
+        buf.write("\n\24\f\24\16\24\u00b5\13\24\3\25\3\25\3\26\3\26\3\26")
+        buf.write("\3\26\3\26\5\26\u00be\n\26\3\26\5\26\u00c1\n\26\3\27\3")
+        buf.write("\27\3\27\5\27\u00c6\n\27\3\30\3\30\3\30\2\2\31\2\4\6\b")
+        buf.write("\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\2\4\3\2\6\n\3")
+        buf.write("\2\30%\2\u00c9\2\60\3\2\2\2\4\64\3\2\2\2\6<\3\2\2\2\b")
+        buf.write("A\3\2\2\2\nL\3\2\2\2\fO\3\2\2\2\16Y\3\2\2\2\20]\3\2\2")
+        buf.write("\2\22e\3\2\2\2\24g\3\2\2\2\26m\3\2\2\2\30t\3\2\2\2\32")
+        buf.write("|\3\2\2\2\34\u0083\3\2\2\2\36\u0091\3\2\2\2 \u0093\3\2")
+        buf.write("\2\2\"\u0098\3\2\2\2$\u009c\3\2\2\2&\u00ac\3\2\2\2(\u00b6")
+        buf.write("\3\2\2\2*\u00b8\3\2\2\2,\u00c2\3\2\2\2.\u00c7\3\2\2\2")
+        buf.write("\60\61\5\4\3\2\61\62\5\6\4\2\62\63\7\24\2\2\63\3\3\2\2")
+        buf.write("\2\64\65\7\3\2\2\65\66\7&\2\2\66\67\7\21\2\2\67\5\3\2")
+        buf.write("\2\28;\5\b\5\29;\5\n\6\2:8\3\2\2\2:9\3\2\2\2;>\3\2\2\2")
+        buf.write("<:\3\2\2\2<=\3\2\2\2=?\3\2\2\2><\3\2\2\2?@\5\32\16\2@")
+        buf.write("\7\3\2\2\2AB\7\4\2\2BG\5\16\b\2CD\7\21\2\2DF\5\16\b\2")
+        buf.write("EC\3\2\2\2FI\3\2\2\2GE\3\2\2\2GH\3\2\2\2HJ\3\2\2\2IG\3")
+        buf.write("\2\2\2JK\7\21\2\2K\t\3\2\2\2LM\5\f\7\2MN\7\21\2\2N\13")
+        buf.write("\3\2\2\2OP\7\5\2\2PR\7&\2\2QS\5\24\13\2RQ\3\2\2\2RS\3")
+        buf.write("\2\2\2ST\3\2\2\2TU\7\22\2\2UV\5\22\n\2VW\7\21\2\2WX\5")
+        buf.write("\6\4\2X\r\3\2\2\2YZ\5\20\t\2Z[\7\22\2\2[\\\5\22\n\2\\")
+        buf.write("\17\3\2\2\2]b\7&\2\2^_\7\23\2\2_a\7&\2\2`^\3\2\2\2ad\3")
+        buf.write("\2\2\2b`\3\2\2\2bc\3\2\2\2c\21\3\2\2\2db\3\2\2\2ef\t\2")
+        buf.write("\2\2f\23\3\2\2\2gh\7\25\2\2hi\5\20\t\2ij\7\22\2\2jk\5")
+        buf.write("\22\n\2kl\7\26\2\2l\25\3\2\2\2mn\7&\2\2np\7\25\2\2oq\5")
+        buf.write("\30\r\2po\3\2\2\2pq\3\2\2\2qr\3\2\2\2rs\7\26\2\2s\27\3")
+        buf.write("\2\2\2ty\5&\24\2uv\7\23\2\2vx\5&\24\2wu\3\2\2\2x{\3\2")
+        buf.write("\2\2yw\3\2\2\2yz\3\2\2\2z\31\3\2\2\2{y\3\2\2\2|}\7\13")
+        buf.write("\2\2}\177\5\34\17\2~\u0080\7\21\2\2\177~\3\2\2\2\177\u0080")
+        buf.write("\3\2\2\2\u0080\u0081\3\2\2\2\u0081\u0082\7\f\2\2\u0082")
+        buf.write("\33\3\2\2\2\u0083\u0088\5\36\20\2\u0084\u0085\7\21\2\2")
+        buf.write("\u0085\u0087\5\36\20\2\u0086\u0084\3\2\2\2\u0087\u008a")
+        buf.write("\3\2\2\2\u0088\u0086\3\2\2\2\u0088\u0089\3\2\2\2\u0089")
+        buf.write("\35\3\2\2\2\u008a\u0088\3\2\2\2\u008b\u0092\3\2\2\2\u008c")
+        buf.write("\u0092\5 \21\2\u008d\u0092\5\6\4\2\u008e\u0092\5\"\22")
+        buf.write("\2\u008f\u0092\5*\26\2\u0090\u0092\5\26\f\2\u0091\u008b")
+        buf.write("\3\2\2\2\u0091\u008c\3\2\2\2\u0091\u008d\3\2\2\2\u0091")
+        buf.write("\u008e\3\2\2\2\u0091\u008f\3\2\2\2\u0091\u0090\3\2\2\2")
+        buf.write("\u0092\37\3\2\2\2\u0093\u0094\7\r\2\2\u0094\u0095\7\25")
+        buf.write("\2\2\u0095\u0096\5$\23\2\u0096\u0097\7\26\2\2\u0097!\3")
+        buf.write("\2\2\2\u0098\u0099\7&\2\2\u0099\u009a\7\27\2\2\u009a\u009b")
+        buf.write("\5&\24\2\u009b#\3\2\2\2\u009c\u00a1\5&\24\2\u009d\u009e")
+        buf.write("\7\23\2\2\u009e\u00a0\5&\24\2\u009f\u009d\3\2\2\2\u00a0")
+        buf.write("\u00a3\3\2\2\2\u00a1\u009f\3\2\2\2\u00a1\u00a2\3\2\2\2")
+        buf.write("\u00a2%\3\2\2\2\u00a3\u00a1\3\2\2\2\u00a4\u00a5\7\25\2")
+        buf.write("\2\u00a5\u00a6\5&\24\2\u00a6\u00a7\7\26\2\2\u00a7\u00ad")
+        buf.write("\3\2\2\2\u00a8\u00ad\7\'\2\2\u00a9\u00ad\7(\2\2\u00aa")
+        buf.write("\u00ad\7&\2\2\u00ab\u00ad\5\26\f\2\u00ac\u00a4\3\2\2\2")
+        buf.write("\u00ac\u00a8\3\2\2\2\u00ac\u00a9\3\2\2\2\u00ac\u00aa\3")
+        buf.write("\2\2\2\u00ac\u00ab\3\2\2\2\u00ad\u00b3\3\2\2\2\u00ae\u00af")
+        buf.write("\5(\25\2\u00af\u00b0\5&\24\2\u00b0\u00b2\3\2\2\2\u00b1")
+        buf.write("\u00ae\3\2\2\2\u00b2\u00b5\3\2\2\2\u00b3\u00b1\3\2\2\2")
+        buf.write("\u00b3\u00b4\3\2\2\2\u00b4\'\3\2\2\2\u00b5\u00b3\3\2\2")
+        buf.write("\2\u00b6\u00b7\t\3\2\2\u00b7)\3\2\2\2\u00b8\u00b9\7\16")
+        buf.write("\2\2\u00b9\u00ba\5&\24\2\u00ba\u00bd\7\17\2\2\u00bb\u00be")
+        buf.write("\5\6\4\2\u00bc\u00be\5.\30\2\u00bd\u00bb\3\2\2\2\u00bd")
+        buf.write("\u00bc\3\2\2\2\u00be\u00c0\3\2\2\2\u00bf\u00c1\5,\27\2")
+        buf.write("\u00c0\u00bf\3\2\2\2\u00c0\u00c1\3\2\2\2\u00c1+\3\2\2")
+        buf.write("\2\u00c2\u00c5\7\20\2\2\u00c3\u00c6\5\6\4\2\u00c4\u00c6")
+        buf.write("\5.\30\2\u00c5\u00c3\3\2\2\2\u00c5\u00c4\3\2\2\2\u00c6")
+        buf.write("-\3\2\2\2\u00c7\u00c8\5\36\20\2\u00c8/\3\2\2\2\22:<GR")
+        buf.write("bpy\177\u0088\u0091\u00a1\u00ac\u00b3\u00bd\u00c0\u00c5")
         return buf.getvalue()
 
 
@@ -114,21 +104,19 @@ class PascalParser ( Parser ):
 
     literalNames = [ "<INVALID>", "'program'", "'var'", "'function'", "'char'", 
                      "'integer'", "'string'", "'real'", "'boolean'", "'begin'", 
-                     "'end'", "'writeln'", "'readln'", "'if'", "'then'", 
-                     "'else'", "';'", "':'", "','", "'.'", "'('", "')'", 
-                     "':='", "'+'", "'-'", "'*'", "'/'", "'//'", "'%'", 
-                     "'='", "'<>'", "'<'", "'<='", "'>'", "'>='", "'or'", 
-                     "'and'" ]
+                     "'end'", "'writeln'", "'if'", "'then'", "'else'", "';'", 
+                     "':'", "','", "'.'", "'('", "')'", "':='", "'+'", "'-'", 
+                     "'*'", "'/'", "'//'", "'%'", "'='", "'<>'", "'<'", 
+                     "'<='", "'>'", "'>='", "'or'", "'and'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "SEMI", "COLON", "COMMA", "DOT", "LPAREN", "RPAREN", 
-                      "ASSIGN", "PLUS", "MINUS", "STAR", "SLASH", "DIV", 
-                      "MOD", "EQUAL", "NOT_EQUAL", "LT", "LE", "GT", "GE", 
-                      "OR", "AND", "ID", "CONST_INT", "CONST_STR", "WS", 
-                      "COMMENT" ]
+                      "<INVALID>", "<INVALID>", "<INVALID>", "SEMI", "COLON", 
+                      "COMMA", "DOT", "LPAREN", "RPAREN", "ASSIGN", "PLUS", 
+                      "MINUS", "STAR", "SLASH", "DIV", "MOD", "EQUAL", "NOT_EQUAL", 
+                      "LT", "LE", "GT", "GE", "OR", "AND", "ID", "CONST_INT", 
+                      "CONST_STR", "WS", "COMMENT" ]
 
     RULE_program = 0
     RULE_programName = 1
@@ -145,24 +133,21 @@ class PascalParser ( Parser ):
     RULE_compoundStatement = 12
     RULE_statements = 13
     RULE_statement = 14
-    RULE_writelnReadln = 15
-    RULE_readln = 16
-    RULE_writeln = 17
-    RULE_assignmentStatement = 18
-    RULE_expressions = 19
-    RULE_expression = 20
-    RULE_operators = 21
-    RULE_ifStatement = 22
-    RULE_elseStatement = 23
-    RULE_blockBody = 24
+    RULE_writeln = 15
+    RULE_assignmentStatement = 16
+    RULE_expressions = 17
+    RULE_expression = 18
+    RULE_operators = 19
+    RULE_ifStatement = 20
+    RULE_elseStatement = 21
+    RULE_blockBody = 22
 
     ruleNames =  [ "program", "programName", "block", "varDeclaration", 
                    "funcDeclaration", "funcDeclarationBlock", "varDeclarationBlock", 
                    "varName", "varType", "argumentList", "funcCall", "parameter", 
-                   "compoundStatement", "statements", "statement", "writelnReadln", 
-                   "readln", "writeln", "assignmentStatement", "expressions", 
-                   "expression", "operators", "ifStatement", "elseStatement", 
-                   "blockBody" ]
+                   "compoundStatement", "statements", "statement", "writeln", 
+                   "assignmentStatement", "expressions", "expression", "operators", 
+                   "ifStatement", "elseStatement", "blockBody" ]
 
     EOF = Token.EOF
     T__0=1
@@ -179,33 +164,32 @@ class PascalParser ( Parser ):
     T__11=12
     T__12=13
     T__13=14
-    T__14=15
-    SEMI=16
-    COLON=17
-    COMMA=18
-    DOT=19
-    LPAREN=20
-    RPAREN=21
-    ASSIGN=22
-    PLUS=23
-    MINUS=24
-    STAR=25
-    SLASH=26
-    DIV=27
-    MOD=28
-    EQUAL=29
-    NOT_EQUAL=30
-    LT=31
-    LE=32
-    GT=33
-    GE=34
-    OR=35
-    AND=36
-    ID=37
-    CONST_INT=38
-    CONST_STR=39
-    WS=40
-    COMMENT=41
+    SEMI=15
+    COLON=16
+    COMMA=17
+    DOT=18
+    LPAREN=19
+    RPAREN=20
+    ASSIGN=21
+    PLUS=22
+    MINUS=23
+    STAR=24
+    SLASH=25
+    DIV=26
+    MOD=27
+    EQUAL=28
+    NOT_EQUAL=29
+    LT=30
+    LE=31
+    GT=32
+    GE=33
+    OR=34
+    AND=35
+    ID=36
+    CONST_INT=37
+    CONST_STR=38
+    WS=39
+    COMMENT=40
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -260,11 +244,11 @@ class PascalParser ( Parser ):
         self.enterRule(localctx, 0, self.RULE_program)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 50
+            self.state = 46
             self.programName()
-            self.state = 51
+            self.state = 47
             self.block()
-            self.state = 52
+            self.state = 48
             self.match(PascalParser.DOT)
         except RecognitionException as re:
             localctx.exception = re
@@ -314,11 +298,11 @@ class PascalParser ( Parser ):
         self.enterRule(localctx, 2, self.RULE_programName)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 54
+            self.state = 50
             self.match(PascalParser.T__0)
-            self.state = 55
+            self.state = 51
             self.match(PascalParser.ID)
-            self.state = 56
+            self.state = 52
             self.match(PascalParser.SEMI)
         except RecognitionException as re:
             localctx.exception = re
@@ -381,29 +365,29 @@ class PascalParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 62
+            self.state = 58
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==PascalParser.T__1 or _la==PascalParser.T__2:
-                self.state = 60
+                self.state = 56
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token in [PascalParser.T__1]:
-                    self.state = 58
+                    self.state = 54
                     self.varDeclaration()
                     pass
                 elif token in [PascalParser.T__2]:
-                    self.state = 59
+                    self.state = 55
                     self.funcDeclaration()
                     pass
                 else:
                     raise NoViableAltException(self)
 
-                self.state = 64
+                self.state = 60
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 65
+            self.state = 61
             self.compoundStatement()
         except RecognitionException as re:
             localctx.exception = re
@@ -460,24 +444,24 @@ class PascalParser ( Parser ):
         self.enterRule(localctx, 6, self.RULE_varDeclaration)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 67
+            self.state = 63
             self.match(PascalParser.T__1)
-            self.state = 68
+            self.state = 64
             self.varDeclarationBlock()
-            self.state = 73
+            self.state = 69
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,2,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 69
+                    self.state = 65
                     self.match(PascalParser.SEMI)
-                    self.state = 70
+                    self.state = 66
                     self.varDeclarationBlock() 
-                self.state = 75
+                self.state = 71
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,2,self._ctx)
 
-            self.state = 76
+            self.state = 72
             self.match(PascalParser.SEMI)
         except RecognitionException as re:
             localctx.exception = re
@@ -528,9 +512,9 @@ class PascalParser ( Parser ):
         self.enterRule(localctx, 8, self.RULE_funcDeclaration)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 78
+            self.state = 74
             self.funcDeclarationBlock()
-            self.state = 79
+            self.state = 75
             self.match(PascalParser.SEMI)
         except RecognitionException as re:
             localctx.exception = re
@@ -596,25 +580,25 @@ class PascalParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 81
+            self.state = 77
             self.match(PascalParser.T__2)
-            self.state = 82
+            self.state = 78
             self.match(PascalParser.ID)
-            self.state = 84
+            self.state = 80
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==PascalParser.LPAREN:
-                self.state = 83
+                self.state = 79
                 self.argumentList()
 
 
-            self.state = 86
+            self.state = 82
             self.match(PascalParser.COLON)
-            self.state = 87
+            self.state = 83
             self.varType()
-            self.state = 88
+            self.state = 84
             self.match(PascalParser.SEMI)
-            self.state = 89
+            self.state = 85
             self.block()
         except RecognitionException as re:
             localctx.exception = re
@@ -669,11 +653,11 @@ class PascalParser ( Parser ):
         self.enterRule(localctx, 12, self.RULE_varDeclarationBlock)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 91
+            self.state = 87
             self.varName()
-            self.state = 92
+            self.state = 88
             self.match(PascalParser.COLON)
-            self.state = 93
+            self.state = 89
             self.varType()
         except RecognitionException as re:
             localctx.exception = re
@@ -730,17 +714,17 @@ class PascalParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 95
+            self.state = 91
             self.match(PascalParser.ID)
-            self.state = 100
+            self.state = 96
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==PascalParser.COMMA:
-                self.state = 96
+                self.state = 92
                 self.match(PascalParser.COMMA)
-                self.state = 97
+                self.state = 93
                 self.match(PascalParser.ID)
-                self.state = 102
+                self.state = 98
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -788,7 +772,7 @@ class PascalParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 103
+            self.state = 99
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PascalParser.T__3) | (1 << PascalParser.T__4) | (1 << PascalParser.T__5) | (1 << PascalParser.T__6) | (1 << PascalParser.T__7))) != 0)):
                 self._errHandler.recoverInline(self)
@@ -854,15 +838,15 @@ class PascalParser ( Parser ):
         self.enterRule(localctx, 18, self.RULE_argumentList)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 105
+            self.state = 101
             self.match(PascalParser.LPAREN)
-            self.state = 106
+            self.state = 102
             self.varName()
-            self.state = 107
+            self.state = 103
             self.match(PascalParser.COLON)
-            self.state = 108
+            self.state = 104
             self.varType()
-            self.state = 109
+            self.state = 105
             self.match(PascalParser.RPAREN)
         except RecognitionException as re:
             localctx.exception = re
@@ -886,12 +870,12 @@ class PascalParser ( Parser ):
         def LPAREN(self):
             return self.getToken(PascalParser.LPAREN, 0)
 
+        def RPAREN(self):
+            return self.getToken(PascalParser.RPAREN, 0)
+
         def parameter(self):
             return self.getTypedRuleContext(PascalParser.ParameterContext,0)
 
-
-        def RPAREN(self):
-            return self.getToken(PascalParser.RPAREN, 0)
 
         def getRuleIndex(self):
             return PascalParser.RULE_funcCall
@@ -920,20 +904,20 @@ class PascalParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 111
+            self.state = 107
             self.match(PascalParser.ID)
-            self.state = 116
+            self.state = 108
+            self.match(PascalParser.LPAREN)
+            self.state = 110
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==PascalParser.LPAREN:
-                self.state = 112
-                self.match(PascalParser.LPAREN)
-                self.state = 113
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PascalParser.LPAREN) | (1 << PascalParser.ID) | (1 << PascalParser.CONST_INT) | (1 << PascalParser.CONST_STR))) != 0):
+                self.state = 109
                 self.parameter()
-                self.state = 114
-                self.match(PascalParser.RPAREN)
 
 
+            self.state = 112
+            self.match(PascalParser.RPAREN)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -990,17 +974,17 @@ class PascalParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 118
+            self.state = 114
             self.expression()
-            self.state = 123
+            self.state = 119
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==PascalParser.COMMA:
-                self.state = 119
+                self.state = 115
                 self.match(PascalParser.COMMA)
-                self.state = 120
+                self.state = 116
                 self.expression()
-                self.state = 125
+                self.state = 121
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1054,19 +1038,19 @@ class PascalParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 126
+            self.state = 122
             self.match(PascalParser.T__8)
-            self.state = 127
+            self.state = 123
             self.statements()
-            self.state = 129
+            self.state = 125
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==PascalParser.SEMI:
-                self.state = 128
+                self.state = 124
                 self.match(PascalParser.SEMI)
 
 
-            self.state = 131
+            self.state = 127
             self.match(PascalParser.T__9)
         except RecognitionException as re:
             localctx.exception = re
@@ -1123,18 +1107,18 @@ class PascalParser ( Parser ):
         self.enterRule(localctx, 26, self.RULE_statements)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 133
+            self.state = 129
             self.statement()
-            self.state = 138
+            self.state = 134
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 134
+                    self.state = 130
                     self.match(PascalParser.SEMI)
-                    self.state = 135
+                    self.state = 131
                     self.statement() 
-                self.state = 140
+                self.state = 136
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
 
@@ -1153,14 +1137,6 @@ class PascalParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-
-        def writelnReadln(self):
-            return self.getTypedRuleContext(PascalParser.WritelnReadlnContext,0)
-
-
-        def readln(self):
-            return self.getTypedRuleContext(PascalParser.ReadlnContext,0)
-
 
         def writeln(self):
             return self.getTypedRuleContext(PascalParser.WritelnContext,0)
@@ -1207,193 +1183,45 @@ class PascalParser ( Parser ):
         localctx = PascalParser.StatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 28, self.RULE_statement)
         try:
-            self.state = 148
+            self.state = 143
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 141
-                self.writelnReadln()
+
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 142
-                self.readln()
+                self.state = 138
+                self.writeln()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 143
-                self.writeln()
+                self.state = 139
+                self.block()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 144
-                self.block()
+                self.state = 140
+                self.assignmentStatement()
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 145
-                self.assignmentStatement()
+                self.state = 141
+                self.ifStatement()
                 pass
 
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 146
-                self.ifStatement()
-                pass
-
-            elif la_ == 7:
-                self.enterOuterAlt(localctx, 7)
-                self.state = 147
+                self.state = 142
                 self.funcCall()
                 pass
 
 
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class WritelnReadlnContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def LPAREN(self, i:int=None):
-            if i is None:
-                return self.getTokens(PascalParser.LPAREN)
-            else:
-                return self.getToken(PascalParser.LPAREN, i)
-
-        def CONST_STR(self):
-            return self.getToken(PascalParser.CONST_STR, 0)
-
-        def RPAREN(self, i:int=None):
-            if i is None:
-                return self.getTokens(PascalParser.RPAREN)
-            else:
-                return self.getToken(PascalParser.RPAREN, i)
-
-        def SEMI(self):
-            return self.getToken(PascalParser.SEMI, 0)
-
-        def ID(self):
-            return self.getToken(PascalParser.ID, 0)
-
-        def getRuleIndex(self):
-            return PascalParser.RULE_writelnReadln
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWritelnReadln" ):
-                listener.enterWritelnReadln(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWritelnReadln" ):
-                listener.exitWritelnReadln(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWritelnReadln" ):
-                return visitor.visitWritelnReadln(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def writelnReadln(self):
-
-        localctx = PascalParser.WritelnReadlnContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 30, self.RULE_writelnReadln)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 150
-            self.match(PascalParser.T__10)
-            self.state = 151
-            self.match(PascalParser.LPAREN)
-            self.state = 152
-            self.match(PascalParser.CONST_STR)
-            self.state = 153
-            self.match(PascalParser.RPAREN)
-            self.state = 154
-            self.match(PascalParser.SEMI)
-            self.state = 155
-            self.match(PascalParser.T__11)
-            self.state = 156
-            self.match(PascalParser.LPAREN)
-            self.state = 157
-            self.match(PascalParser.ID)
-            self.state = 158
-            self.match(PascalParser.RPAREN)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class ReadlnContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def LPAREN(self):
-            return self.getToken(PascalParser.LPAREN, 0)
-
-        def varName(self):
-            return self.getTypedRuleContext(PascalParser.VarNameContext,0)
-
-
-        def RPAREN(self):
-            return self.getToken(PascalParser.RPAREN, 0)
-
-        def getRuleIndex(self):
-            return PascalParser.RULE_readln
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterReadln" ):
-                listener.enterReadln(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitReadln" ):
-                listener.exitReadln(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReadln" ):
-                return visitor.visitReadln(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def readln(self):
-
-        localctx = PascalParser.ReadlnContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 32, self.RULE_readln)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 160
-            self.match(PascalParser.T__11)
-            self.state = 161
-            self.match(PascalParser.LPAREN)
-            self.state = 162
-            self.varName()
-            self.state = 163
-            self.match(PascalParser.RPAREN)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1443,16 +1271,16 @@ class PascalParser ( Parser ):
     def writeln(self):
 
         localctx = PascalParser.WritelnContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 34, self.RULE_writeln)
+        self.enterRule(localctx, 30, self.RULE_writeln)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 165
+            self.state = 145
             self.match(PascalParser.T__10)
-            self.state = 166
+            self.state = 146
             self.match(PascalParser.LPAREN)
-            self.state = 167
+            self.state = 147
             self.expressions()
-            self.state = 168
+            self.state = 148
             self.match(PascalParser.RPAREN)
         except RecognitionException as re:
             localctx.exception = re
@@ -1503,14 +1331,14 @@ class PascalParser ( Parser ):
     def assignmentStatement(self):
 
         localctx = PascalParser.AssignmentStatementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 36, self.RULE_assignmentStatement)
+        self.enterRule(localctx, 32, self.RULE_assignmentStatement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 170
+            self.state = 150
             self.match(PascalParser.ID)
-            self.state = 171
+            self.state = 151
             self.match(PascalParser.ASSIGN)
-            self.state = 172
+            self.state = 152
             self.expression()
         except RecognitionException as re:
             localctx.exception = re
@@ -1564,21 +1392,21 @@ class PascalParser ( Parser ):
     def expressions(self):
 
         localctx = PascalParser.ExpressionsContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 38, self.RULE_expressions)
+        self.enterRule(localctx, 34, self.RULE_expressions)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 174
+            self.state = 154
             self.expression()
-            self.state = 179
+            self.state = 159
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==PascalParser.COMMA:
-                self.state = 175
+                self.state = 155
                 self.match(PascalParser.COMMA)
-                self.state = 176
+                self.state = 156
                 self.expression()
-                self.state = 181
+                self.state = 161
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1654,52 +1482,52 @@ class PascalParser ( Parser ):
     def expression(self):
 
         localctx = PascalParser.ExpressionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 40, self.RULE_expression)
+        self.enterRule(localctx, 36, self.RULE_expression)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 190
+            self.state = 170
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
             if la_ == 1:
-                self.state = 182
+                self.state = 162
                 self.match(PascalParser.LPAREN)
-                self.state = 183
+                self.state = 163
                 self.expression()
-                self.state = 184
+                self.state = 164
                 self.match(PascalParser.RPAREN)
                 pass
 
             elif la_ == 2:
-                self.state = 186
+                self.state = 166
                 self.match(PascalParser.CONST_INT)
                 pass
 
             elif la_ == 3:
-                self.state = 187
+                self.state = 167
                 self.match(PascalParser.CONST_STR)
                 pass
 
             elif la_ == 4:
-                self.state = 188
+                self.state = 168
                 self.match(PascalParser.ID)
                 pass
 
             elif la_ == 5:
-                self.state = 189
+                self.state = 169
                 self.funcCall()
                 pass
 
 
-            self.state = 197
+            self.state = 177
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 192
+                    self.state = 172
                     self.operators()
-                    self.state = 193
+                    self.state = 173
                     self.expression() 
-                self.state = 199
+                self.state = 179
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
 
@@ -1784,11 +1612,11 @@ class PascalParser ( Parser ):
     def operators(self):
 
         localctx = PascalParser.OperatorsContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 42, self.RULE_operators)
+        self.enterRule(localctx, 38, self.RULE_operators)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 200
+            self.state = 180
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PascalParser.PLUS) | (1 << PascalParser.MINUS) | (1 << PascalParser.STAR) | (1 << PascalParser.SLASH) | (1 << PascalParser.DIV) | (1 << PascalParser.MOD) | (1 << PascalParser.EQUAL) | (1 << PascalParser.NOT_EQUAL) | (1 << PascalParser.LT) | (1 << PascalParser.LE) | (1 << PascalParser.GT) | (1 << PascalParser.GE) | (1 << PascalParser.OR) | (1 << PascalParser.AND))) != 0)):
                 self._errHandler.recoverInline(self)
@@ -1850,34 +1678,34 @@ class PascalParser ( Parser ):
     def ifStatement(self):
 
         localctx = PascalParser.IfStatementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 44, self.RULE_ifStatement)
+        self.enterRule(localctx, 40, self.RULE_ifStatement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 202
-            self.match(PascalParser.T__12)
-            self.state = 203
+            self.state = 182
+            self.match(PascalParser.T__11)
+            self.state = 183
             self.expression()
-            self.state = 204
-            self.match(PascalParser.T__13)
-            self.state = 207
+            self.state = 184
+            self.match(PascalParser.T__12)
+            self.state = 187
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,13,self._ctx)
             if la_ == 1:
-                self.state = 205
+                self.state = 185
                 self.block()
                 pass
 
             elif la_ == 2:
-                self.state = 206
+                self.state = 186
                 self.blockBody()
                 pass
 
 
-            self.state = 210
+            self.state = 190
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,14,self._ctx)
             if la_ == 1:
-                self.state = 209
+                self.state = 189
                 self.elseStatement()
 
 
@@ -1928,21 +1756,21 @@ class PascalParser ( Parser ):
     def elseStatement(self):
 
         localctx = PascalParser.ElseStatementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 46, self.RULE_elseStatement)
+        self.enterRule(localctx, 42, self.RULE_elseStatement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 212
-            self.match(PascalParser.T__14)
-            self.state = 215
+            self.state = 192
+            self.match(PascalParser.T__13)
+            self.state = 195
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,15,self._ctx)
             if la_ == 1:
-                self.state = 213
+                self.state = 193
                 self.block()
                 pass
 
             elif la_ == 2:
-                self.state = 214
+                self.state = 194
                 self.blockBody()
                 pass
 
@@ -1990,10 +1818,10 @@ class PascalParser ( Parser ):
     def blockBody(self):
 
         localctx = PascalParser.BlockBodyContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 48, self.RULE_blockBody)
+        self.enterRule(localctx, 44, self.RULE_blockBody)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 217
+            self.state = 197
             self.statement()
         except RecognitionException as re:
             localctx.exception = re

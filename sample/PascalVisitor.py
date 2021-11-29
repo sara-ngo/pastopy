@@ -84,16 +84,6 @@ class PascalVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PascalParser#writelnReadln.
-    def visitWritelnReadln(self, ctx:PascalParser.WritelnReadlnContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by PascalParser#readln.
-    def visitReadln(self, ctx:PascalParser.ReadlnContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by PascalParser#writeln.
     def visitWriteln(self, ctx:PascalParser.WritelnContext):
         return self.visitChildren(ctx)

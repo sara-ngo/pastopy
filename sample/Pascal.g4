@@ -49,21 +49,12 @@ statements:
     statement (SEMI statement)*;
 
 statement:
-    writelnReadln
-    | readln
     | writeln
     | block
     | assignmentStatement
     | ifStatement
     | funcCall
     ;
-
-writelnReadln:
-    'writeln' LPAREN CONST_STR RPAREN SEMI
-    'readln' LPAREN ID RPAREN;
-
-readln:
-    'readln' LPAREN varName RPAREN;
 
 writeln:
     'writeln' LPAREN expressions RPAREN;
