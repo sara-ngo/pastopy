@@ -146,6 +146,7 @@ if __name__ == '__main__':
     if len(sys.argv) == 2:
         main(sys.argv[1])
     else:
+        # main('test/test0.pas')
         # main('test/test1.pas')
         # main('test/test2.pas')
         # main('test/test3.pas')

@@ -1,7 +1,7 @@
 program maxFunc;
 
 var
-   a, b, res : real;
+   a, b, ret : real;
 
 function max(num1, num2: real): real;
 var
